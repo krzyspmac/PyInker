@@ -1,7 +1,7 @@
 from PIL import Image, ImageDraw, ImageFont
 import textwrap
-from mod_general import Rect
-from mod_general import text_wrap
+from general import Rect
+from general import text_wrap
 
 class WidgetInterface:
     @property
@@ -13,7 +13,7 @@ class WidgetInterface:
     def bounds(self, val):
         self._bounds = val
 
-    def set_config(self, config: dict)
+    def set_config(self, config: dict):
         """Receive the configuration. Each Widget can take something else from the configuration itself."""
         pass
 
@@ -25,6 +25,20 @@ class WidgetInterface:
     def draw(self, drawObject):
         """Draws the widget"""
         pass
+
+    pass # WidgetInterface
+
+class ViewInterface:
+
+    def setup(self):
+        """A good point to setup the view."""
+        pass
+
+    def draw(self, image, draw):
+        """Called by the main screen. You should draw the view. Some additional parameters can be passed so not all the screen is udpated all the time."""
+        pass
+
+    pass # ViewInterface
 
 class TextWidget(WidgetInterface):
 

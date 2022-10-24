@@ -1,3 +1,15 @@
 screen:
   width: 1280
   height: 800
+
+colors:
+- name: "White"
+  values: [255, 255, 255]
+- name: "Black"
+  values: [0, 0, 0]
+- name: "Red"
+  values: [255, 0, 0]
+
+fonts:
+- name: "Default"
+  path: "fonts/Bitter-VariableFont_wght.ttf"

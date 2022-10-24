@@ -32,6 +32,72 @@ class Rect:
     def shape(self):
         return [ (self.x, self.y), (self.x + self.width, self.y + self.height) ]
 
+    pass # Rect
+
+class FontList:
+    fonts = { }
+
+    @staticmethod
+    def from_config(cfg):
+        for font_descriptor in cfg:
+            FontList.add_font(font_descriptor)
+        pass
+
+    @staticmethod
+    def add_font(cfg):
+        name = cfg["name"]
+        FontList.fonts[name] = Font(name, cfg["path"])
+        pass
+
+    @staticmethod
+    def get_font(name):
+        return FontList.fonts[name]
+
+    pass # FontList
+
+class Font:
+    def __init__(self, name: str, path):
+        self._name = name
+        self._path = path
+        pass
+
+    def create(self, size: int):
+        return ImageFont.truetype(self._path, size)
+
+    pass # Font
+
+class ColorList:
+    colors = { }
+
+    @staticmethod
+    def from_config(cfg):
+        for color_descriptor in cfg:
+            ColorList.add_color(color_descriptor)
+        pass
+
+    @staticmethod
+    def add_color(cfg):
+        name = cfg["name"]
+        ColorList.colors[name] = Color(cfg["values"])
+        pass
+
+    @staticmethod
+    def get_color(name):
+        return ColorList.colors[name]
+
+    pass # ColorList
+
+class Color:
+
+    def __init__(self, rgb):
+        self._rgb = (rgb[0], rgb[1], rgb[2])
+
+    @property
+    def rgb(self):
+        return self._rgb
+
+    pass # Color
+
 def text_wrap(text,font,writing,max_width,max_height,max_lines=9999):
     lines = [[]]
     words = text.split()
