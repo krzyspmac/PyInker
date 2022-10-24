@@ -4,6 +4,9 @@ import time
 from PIL import Image, ImageDraw, ImageFont
 from mod_general import Rect
 from mod_widgets import TextWidget
+import yaml
+from yaml import load, dump
+from yaml import Loader, Dumper
 
 # RGB Colors
 WHITE = (255, 255, 255)
@@ -27,5 +30,16 @@ def draw():
 
     image.show()
     pass
+
+with open("config.yml", "r") as stream:
+    try:
+        cfg = yaml.safe_load(stream)
+        print(cfg["screen"])
+        width = int(cfg["screen"]["width"])
+        print(width)
+    except yaml.YAMLError as exc:
+        print(exc)
+
+# print(cfg["screen"])
 
 draw()

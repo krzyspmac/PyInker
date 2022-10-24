@@ -13,6 +13,10 @@ class WidgetInterface:
     def bounds(self, val):
         self._bounds = val
 
+    def set_config(self, config: dict)
+        """Receive the configuration. Each Widget can take something else from the configuration itself."""
+        pass
+
     def set_bounds(self, bounds: Rect):
         """Sets bounds."""
         self.bounds = bounds
