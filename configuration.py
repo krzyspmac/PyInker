@@ -10,7 +10,6 @@ class Configuration:
         with open(filename, "r") as stream:
             try:
                 self._dict = yaml.safe_load(stream)
-                print(self.raw)
                 FontList.from_config(self.fonts)
                 ColorList.from_config(self.colors)
             except yaml.YAMLError as exc:

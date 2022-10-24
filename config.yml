@@ -13,3 +13,7 @@ colors:
 fonts:
 - name: "Default"
   path: "fonts/Bitter-VariableFont_wght.ttf"
+
+modules:
+  mod_weather:
+    key: "97aef813e5e76ac11aa56982cd0732a9"

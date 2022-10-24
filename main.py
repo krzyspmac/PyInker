@@ -18,15 +18,27 @@ import os
 import time
 from threading import Thread
 
+# from modules.modules_interfaces import ModuleInterface
+from modules.modules_manager import ModuleManager
+# from modules.weather.mod_weather import ModuleWeather
+
+
 # Configuration
 display = {'width': 320, 'height': 200}
 configuration: Configuration
+modulesManager: ModuleManager
 
 def setup():
     global configuration
     global display
+    global modulesManager
+
     configuration = Configuration("config.yml")
     display = {'width': configuration.screen["width"], 'height': configuration.screen["height"]}
+
+    modulesManager = ModuleManager()
+    modulesManager.load_modules()
+    modulesManager.setup_modules(configuration=configuration)
     pass
 
 def draw():
@@ -41,7 +53,7 @@ def draw():
     pass
 
 setup()
-draw()
+# draw()
 
 def threaded():
     time.sleep(1)
@@ -83,4 +95,4 @@ def main2():
 
 # main2()
 
-curses.wrapper(main)
+# curses.wrapper(main)
