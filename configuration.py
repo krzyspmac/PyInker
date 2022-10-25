@@ -6,7 +6,6 @@ class Configuration:
     dict = {}
 
     def __init__(self, filename):
-
         with open(filename, "r") as stream:
             try:
                 self._dict = yaml.safe_load(stream)

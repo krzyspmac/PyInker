@@ -1,8 +1,8 @@
-screen:
+screen: # Define screen parameters. Check your e-ink setup.
   width: 1280
   height: 800
 
-colors:
+colors: # The main colors used across the application. Accessed by `name`.
 - name: "White"
   values: [255, 255, 255]
 - name: "Black"
@@ -10,10 +10,12 @@ colors:
 - name: "Red"
   values: [255, 0, 0]
 
-fonts:
+fonts: # The main fonts used across the application. Accessed by `name`.
 - name: "Default"
   path: "fonts/Bitter-VariableFont_wght.ttf"
 
+# List of modules. Each module in the folder `modules` can have an entry here and
+# this configuration gets passed to the module itsef.
 modules:
   mod_weather:
     key: "97aef813e5e76ac11aa56982cd0732a9"

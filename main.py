@@ -37,9 +37,6 @@ def draw():
     view = ModuleMainView()
     view.setup()
     view.draw(image, draw)
-    # view = SampleView()
-    # view.setup()
-    # view.draw(image, draw)
 
     image.show()
     pass
