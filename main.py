@@ -9,7 +9,7 @@ from modules.general import Rect
 from modules.widgets import *
 from configuration import Configuration
 from modules.modules_manager import ModuleManager
-from sample_view import SampleView
+from modules.mod_main.mod_main import ModuleMainView
 
 # Configuration
 display = {'width': 320, 'height': 200}
@@ -34,15 +34,18 @@ def draw():
     image = Image.new("RGB", (display['width'], display['height']), color=ColorList.get_color("White").rgb)
     draw = ImageDraw.Draw(image)
 
-    view = SampleView()
+    view = ModuleMainView()
     view.setup()
     view.draw(image, draw)
+    # view = SampleView()
+    # view.setup()
+    # view.draw(image, draw)
 
     image.show()
     pass
 
 setup()
-# draw()
+draw()
 
 def threaded():
     time.sleep(1)

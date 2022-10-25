@@ -20,7 +20,10 @@ class ModuleManager(ModuleManagerInterface):
 
         mod_configs = configuration.raw["modules"]
         for module in self.modules:
-            this_mod_config = mod_configs[module]
+            this_mod_config = {}
+            if module in mod_configs:
+                this_mod_config = mod_configs[module]
+                pass
             self.modules[module].setup(this_mod_config)
             pass
         pass
