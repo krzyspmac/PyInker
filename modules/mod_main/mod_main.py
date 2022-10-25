@@ -1,4 +1,4 @@
-from ..modules_interfaces import ModuleInterface
+from ..modules_interfaces import *
 from ..modules_manager import ModuleManager
 from ..widgets import TextWidget, ViewInterface
 from ..general import *
@@ -23,8 +23,8 @@ class ModuleMainView(ViewInterface):
 
     # ViewInterface
 
-    def setup(self):
-        super().setup()
+    def setup(self, renderer: RendererInterface):
+        super().setup(renderer=renderer)
         self.__setup()
         pass
 

@@ -3,42 +3,47 @@ import time
 import curses
 from threading import Thread
 from PIL import Image, ImageDraw, ImageFont
-from modules.general import FontList
-from modules.general import ColorList
-from modules.general import Rect
+from modules.general import *
 from modules.widgets import *
+from display.display_waveshare import *
 from configuration import Configuration
+from modules.renderer import Renderer
 from modules.modules_manager import ModuleManager
 from modules.mod_main.mod_main import ModuleMainView
 
 # Configuration
-display = {'width': 320, 'height': 200}
 configuration: Configuration
 modulesManager: ModuleManager
+displayDevice: DisplayDeviceInterface
+renderer: Renderer
 
 def setup():
     """Setup the application, load configuration files, etc."""
     global configuration
-    global display
     global modulesManager
+    global renderer
 
     configuration = Configuration("config.yml")
-    display = {'width': configuration.screen["width"], 'height': configuration.screen["height"]}
 
     modulesManager = ModuleManager()
     modulesManager.load_modules()
     modulesManager.setup_modules(configuration=configuration)
+
+    displayDevice = DisplayWaveshare()
+
+    renderer = Renderer(
+        width=configuration.screen["width"], 
+        height=configuration.screen["height"], 
+        background=ColorList.get_color("White"),
+        displayDevice=displayDevice
+        )
     pass
 
 def draw():
-    image = Image.new("RGB", (display['width'], display['height']), color=ColorList.get_color("White").rgb)
-    draw = ImageDraw.Draw(image)
-
     view = ModuleMainView()
-    view.setup()
-    view.draw(image, draw)
-
-    image.show()
+    view.setup(renderer=renderer)
+    view.draw(renderer.image, renderer.draw)
+    renderer.image.show()
     pass
 
 setup()
