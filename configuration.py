@@ -1,6 +1,6 @@
 import yaml
-from general import FontList
-from general import ColorList
+from modules.general import FontList
+from modules.general import ColorList
 
 class Configuration:
     dict = {}

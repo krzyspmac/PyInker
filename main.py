@@ -1,27 +1,15 @@
 import os
-from sre_constants import NOT_LITERAL
 import time
-from PIL import Image, ImageDraw, ImageFont
-from general import FontList
-from general import ColorList
-from general import Rect
-from widgets import TextWidget
-from configuration import Configuration
-
-import yaml
-from yaml import load, dump
-from yaml import Loader, Dumper
-from sample_view import SampleView
-# from pynput.keyboard import Key, Listener
 import curses
-import os
-import time
 from threading import Thread
-
-# from modules.modules_interfaces import ModuleInterface
+from PIL import Image, ImageDraw, ImageFont
+from modules.general import FontList
+from modules.general import ColorList
+from modules.general import Rect
+from modules.widgets import *
+from configuration import Configuration
 from modules.modules_manager import ModuleManager
-# from modules.weather.mod_weather import ModuleWeather
-
+from sample_view import SampleView
 
 # Configuration
 display = {'width': 320, 'height': 200}
@@ -29,6 +17,7 @@ configuration: Configuration
 modulesManager: ModuleManager
 
 def setup():
+    """Setup the application, load configuration files, etc."""
     global configuration
     global display
     global modulesManager

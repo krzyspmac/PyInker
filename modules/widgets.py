@@ -1,7 +1,7 @@
 from PIL import Image, ImageDraw, ImageFont
 import textwrap
-from general import Rect
-from general import text_wrap
+from .general import Rect
+from .general import text_wrap
 
 class WidgetInterface:
     @property

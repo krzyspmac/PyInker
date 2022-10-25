@@ -2,11 +2,11 @@ import os
 from sre_constants import NOT_LITERAL
 import time
 from PIL import Image, ImageDraw, ImageFont
-from general import FontList
-from general import ColorList
-from general import Rect
-from widgets import TextWidget
-from widgets import ViewInterface
+from modules.general import FontList
+from modules.general import ColorList
+from modules.general import Rect
+from modules.widgets import TextWidget
+from modules.widgets import ViewInterface
 import yaml
 from yaml import load, dump
 from yaml import Loader, Dumper
