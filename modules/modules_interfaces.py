@@ -1,5 +1,6 @@
 from urllib.request import Request
 from .general import Rect
+from PIL import Image, ImageDraw, ImageFont
 
 class ModuleManagerInterface:
     """Denotes the default interface for the module manager.
@@ -34,13 +35,34 @@ class DisplayDeviceInterface:
        The RendererInterface works directly with the `DisplayDeviceInterface`.
     """
 
+    def setup(self):
+        """Perform the setup. Only once."""
+        pass
+
+    def init(self):
+        """Called before the first display. Only once."""
+        pass
+
+    def deinit(self):
+        """Deinitializes the view."""
+        pass
+
     def pre_display(self):
+        """Called before each frame update."""
         pass
 
-    def display_full(self, image):
+    def clear(self):
+        """Clears the viewport."""
         pass
 
-    def display_partial(self, image, bouds: Rect):
+    def sleep(self):
+        """Puts the display to sleep if possible."""
+        pass
+
+    def display_full(self, image: Image):
+        pass
+
+    def display_partial(self, image: Image, bouds: Rect):
         pass
 
     pass # DisplayDeviceInterface

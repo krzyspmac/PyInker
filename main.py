@@ -22,6 +22,7 @@ def setup():
     global configuration
     global modulesManager
     global renderer
+    global displayDevice
 
     configuration = Configuration("config.yml")
 
@@ -39,19 +40,33 @@ def setup():
         )
     pass
 
+def prepare_screen():
+    global displayDevice
+    displayDevice.setup()
+    displayDevice.init()
+    pass
+
+def shutdown_screen():
+    global displayDevice
+    displayDevice.clear()
+    displayDevice.deinit()
+    pass
+
 def draw():
     view = ModuleMainView()
     view.setup(renderer=renderer)
     view.draw(renderer.image, renderer.draw)
+
+    displayDevice.clear()
+    displayDevice.display_full(renderer.image)
     #renderer.image.show()
     pass
 
-setup()
-draw()
 
 def threaded():
-    time.sleep(1)
-    print('This is from another thread')
+    while 1:
+        time.sleep(0.3)
+        print('This is from another thread')
     pass
 
 def main(win):
@@ -63,6 +78,11 @@ def main(win):
     key=""
     win.clear()                
     win.addstr("Detected key:")
+
+    setup()
+    prepare_screen()
+    draw()
+
     while 1:         
         time.sleep(1/60)
         print("Wait\r")
@@ -89,4 +109,9 @@ def main2():
 
 # main2()
 
-# curses.wrapper(main)
+curses.wrapper(main)
+
+
+
+#time.sleep(2)
+shutdown_screen()

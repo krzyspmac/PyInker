@@ -1,6 +1,6 @@
 screen: # Define screen parameters. Check your e-ink setup.
-  width: 1280
-  height: 800
+  width: 800
+  height: 480
 
 colors: # The main colors used across the application. Accessed by `name`.
 - name: "White"
@@ -12,7 +12,7 @@ colors: # The main colors used across the application. Accessed by `name`.
 
 fonts: # The main fonts used across the application. Accessed by `name`.
 - name: "Default"
-  path: "fonts/Bitter-VariableFont_wght.ttf"
+  path: "fonts/Font.ttc"
 
 # List of modules. Each module in the folder `modules` can have an entry here and
 # this configuration gets passed to the module itsef.

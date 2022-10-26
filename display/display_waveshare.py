@@ -11,4 +11,28 @@ from waveshare_epd import epd7in5_V2
 class DisplayWaveshare(DisplayDeviceInterface):
     """Concrete class for the e-ink Waveshare device."""
     
+    def setup(self):
+        super().setup()
+        self.__epd = epd7in5_V2.EPD()
+
+    def init(self):
+        super().init()
+        self.__epd.init()
+
+    def deinit(self):
+        super().deinit()
+        epd7in5_V2.epdconfig.module_exit()
+
+    def clear(self):
+        super().clear()
+        self.__epd.Clear()
+
+    def sleep(self):
+        super().sleep()
+        self.__epd.sleep()
+
+    def display_full(self, image: Image):
+        super().display_full(image)
+        self.__epd.display(self.__epd.getbuffer(image))
+
     pass # DisplayWaveshare
