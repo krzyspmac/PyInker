@@ -43,7 +43,7 @@ def draw():
     view = ModuleMainView()
     view.setup(renderer=renderer)
     view.draw(renderer.image, renderer.draw)
-    renderer.image.show()
+    #renderer.image.show()
     pass
 
 setup()
