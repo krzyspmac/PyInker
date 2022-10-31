@@ -1,4 +1,6 @@
+from multiprocessing.util import is_abstract_socket_namespace
 from urllib.request import Request
+from xmlrpc.client import Boolean
 from .general import Rect
 from PIL import Image, ImageDraw, ImageFont
 
@@ -35,7 +37,7 @@ class DisplayDeviceInterface:
     def display_full(self, image: Image):
         pass
 
-    def display_partial(self, image: Image, bouds: Rect):
+    def display_partial(self, image: Image, bounds: Rect):
         pass
 
     pass # DisplayDeviceInterface
@@ -142,6 +144,19 @@ class ViewCoordinator:
     def set_view_active(self, view):
         pass
 
+    def deinit(self):
+        pass
+
+    def frame_update(self):
+        """Sent by the main application when the frame updates.
+           When that actually happens is defined by the configuration file.
+           Note that frame update does not neccessarily means the e-ink screen
+           will update. That will happen when the Renderer gets the appropriate
+           event. What will happen though is the current view will have the
+           chance to draw itself to the off-screen buffer image.
+        """
+        pass
+
     pass
 
 class ViewInterface:
@@ -150,6 +165,8 @@ class ViewInterface:
        receiver of the keyboard inputs. It is managed by the main
        coordinator that has the option to change the current view to another one.
     """
+
+    __isActive: Boolean
 
     def setup(self, renderer: RendererInterface, viewCoordinator: ViewCoordinator, configuration):
         """A good point to setup the view."""
@@ -168,16 +185,23 @@ class ViewInterface:
 
     def did_deactivate(self):
         """Called just after deactivation."""
+        self.__isActive = False
         pass
 
     def did_activate(self):
         """Called just after activation."""
+        self.__isActive = True
         pass
 
     def draw(self, image, draw):
         """Called by the main screen. You should draw the view. Some additional parameters
            can be passed so not all the screen have to be udpated all the time.
         """
+        pass
+
+    def set_needs_update(self, value: Boolean):
+        """Marks the view as needing updating."""
+        self.__needs_update = value
         pass
 
     @property
@@ -195,6 +219,14 @@ class ViewInterface:
         """Returns the configuration passed to this view"""
         return self.__configuration
 
+    @property
+    def needs_update(self):
+        return self.__needs_update
+
+    @property
+    def is_active(self):
+        return self.__isActive
+
     pass # ViewInterface
 
 class WidgetInterface:
@@ -204,7 +236,6 @@ class WidgetInterface:
     """
     @property
     def bounds(self):
-        print("getter method called")
         return self._bounds
 
     @bounds.setter

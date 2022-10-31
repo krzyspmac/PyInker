@@ -15,8 +15,12 @@ class MainViewCoordinator(ViewCoordinator):
             viewCoordinator=self,
             configuration=configuration
         )
+        pass
 
-        self.set_view_active(self.main_view)
+    def deinit(self):
+        super().deinit()
+        self.__activeView.will_activate()
+        self.__activeView.did_deactivate()
         pass
 
     def set_view_active(self, view: ViewInterface):
@@ -38,6 +42,16 @@ class MainViewCoordinator(ViewCoordinator):
 
     def show_main_view(self):
         self.set_view_active(self.__mainView)
+        pass
+
+    def frame_update(self):
+        super().frame_update()
+        if self.active_view is not None:
+            if self.active_view.needs_update:
+                self.active_view.draw(self.renderer.image, self.renderer.draw)
+                self.active_view.set_needs_update(False)
+                pass
+            pass
         pass
 
     @property

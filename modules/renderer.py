@@ -64,7 +64,13 @@ class Renderer(RendererInterface):
     def __render(self, item: RendererInterface.RefreshRequest):
         if item is not None:
             self.display.pre_display()
-            self.display.display_full(self.image)
+            frame = item.frame
+            if frame is not None:
+                print("Render partial\r")
+                self.display.display_partial(self.image, bounds=frame)
+            else:
+                print("Render full\r")
+                self.display.display_full(self.image)
         pass
 
     @property

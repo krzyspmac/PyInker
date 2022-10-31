@@ -22,6 +22,9 @@ class TextWidget(WidgetInterface):
         self.text = text
         pass
 
+    def get_text(self) -> str:
+        return self.text
+
     def set_font(self, font):
         self.font = font
         pass
@@ -34,5 +37,4 @@ class TextWidget(WidgetInterface):
         drawObject.rectangle(self.bounds.shape, fill=(255, 255, 255), outline=(0, 0, 0))
         wrapper = textwrap.TextWrapper(width=self.bounds.width) 
         description_wrapped = text_wrap(self.text, self.font, drawObject, self.bounds.width, self.bounds.height)
-        print(self.color)
         drawObject.text( (self.bounds.x, self.bounds.y), description_wrapped, font=self.font, fill=self.color)

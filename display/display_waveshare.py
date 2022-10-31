@@ -35,4 +35,9 @@ class DisplayWaveshare(DisplayDeviceInterface):
         super().display_full(image)
         self.__epd.display(self.__epd.getbuffer(image))
 
+    def display_partial(self, image: Image, bounds: Rect):
+        # Not supported yet
+        super().display_partial(image, bounds)
+        self.__epd.display(self.__epd.getbuffer(image))
+
     pass # DisplayWaveshare

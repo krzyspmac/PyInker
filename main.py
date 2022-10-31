@@ -97,7 +97,7 @@ def main(win):
     renderer.prepare()
 
     while 1:         
-        time.sleep(1/60)
+        time.sleep(10/60)
         print("Wait\r")
 
         while renderer.dequeue_refresh() is not None:
@@ -113,7 +113,7 @@ def main(win):
               break           
         except Exception as e:
            # No input   
-           pass         
+           pass
 
 def main2():
     thread = Thread(target=threaded)
@@ -128,8 +128,6 @@ def main2():
 # main2()
 
 curses.wrapper(main)
-
-
-
 #time.sleep(2)
 shutdown_screen()
+viewCoordinator.deinit()
