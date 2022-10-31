@@ -2,33 +2,6 @@ from urllib.request import Request
 from .general import Rect
 from PIL import Image, ImageDraw, ImageFont
 
-class ModuleManagerInterface:
-    """Denotes the default interface for the module manager.
-    """
-
-    def register_module(self, module_name, module):
-        """Register a module for future use."""
-        pass
-
-    def setup_modules(self, configuration):
-        """Setup modules by providing the YAML-parsed configuration."""
-        pass
-
-    pass # ModuleManagerInterface
-
-class ModuleInterface:
-    """Define an interface for a module. 
-       A module is a piece of code that is automatically loaded
-       by the module manager. Then the module has the option to
-       register itself for periodic, scheduled updates or setup
-       any other module-specific jobs.
-    """
-
-    def setup(self, configuration):
-        pass
-
-    pass # ModuleInterface
-
 class DisplayDeviceInterface:
     """Defines an interface for the physical device. All low-level functions should pass through a specific
        device back-end so that they're easy to be replaced.
@@ -117,6 +90,54 @@ class RendererInterface:
 
     pass # RendererInterface
 
+class ModuleManagerInterface:
+    """Denotes the default interface for the module manager.
+    """
+
+    def register_renderer(self, renderer: RendererInterface):
+        self.__renderer = renderer
+        pass
+
+    def register_module(self, module_name, module):
+        """Register a module for future use."""
+        pass
+
+    def setup_modules(self, configuration):
+        """Setup modules by providing the YAML-parsed configuration."""
+        pass
+
+    @property
+    def renderer(self):
+        return self.__renderer
+
+    pass # ModuleManagerInterface
+
+class ModuleInterface:
+    """Define an interface for a module. 
+       A module is a piece of code that is automatically loaded
+       by the module manager. Then the module has the option to
+       register itself for periodic, scheduled updates or setup
+       any other module-specific jobs.
+    """
+
+    def setup(self, configuration):
+        pass
+
+    pass # ModuleInterface
+
+class ViewCoordinator:
+    """Defines the interface for the coordinator that takes charge of
+       view switching.
+    """
+
+    def setup(self, configuration, renderer: RendererInterface):
+        pass
+
+    def set_view_active(self, view):
+        pass
+
+    pass
+
 class ViewInterface:
     """Defines the interface for a view.
        A View is defined by having access to the whole screens, is the sole
@@ -124,9 +145,27 @@ class ViewInterface:
        coordinator that has the option to change the current view to another one.
     """
 
-    def setup(self, renderer: RendererInterface):
+    def setup(self, renderer: RendererInterface, viewCoordinator: ViewCoordinator, configuration):
         """A good point to setup the view."""
         self.__renderer = renderer
+        self.__coordinator = viewCoordinator
+        self.__configuration = configuration
+        pass
+
+    def will_deactivate(self):
+        """Called just before deactiation of the view."""
+        pass
+
+    def will_activate(self):
+        """Called just before activation of the view."""
+        pass
+
+    def did_deactivate(self):
+        """Called just after deactivation."""
+        pass
+
+    def did_activate(self):
+        """Called just after activation."""
         pass
 
     def draw(self, image, draw):
@@ -139,6 +178,16 @@ class ViewInterface:
     def renderer(self):
         """Return the current renderer."""
         return self.__renderer
+
+    @property
+    def coordinator(self):
+        """Return the current view coordinatator."""
+        return self.__coordinator
+    
+    @property
+    def configuration(self):
+        """Returns the configuration passed to this view"""
+        return self.__configuration
 
     pass # ViewInterface
 

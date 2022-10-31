@@ -23,14 +23,30 @@ class ModuleMainView(ViewInterface):
 
     # ViewInterface
 
-    def setup(self, renderer: RendererInterface):
-        super().setup(renderer=renderer)
+    def setup(self, renderer: RendererInterface, viewCoordinator: ViewCoordinator, configuration):
+        super().setup(renderer=renderer, viewCoordinator=viewCoordinator, configuration=configuration)
         self.__setup()
         pass
 
     def draw(self, image, draw):
         self.__draw(image, draw)
         pass
+
+    def will_deactivate(self):
+        return super().will_deactivate
+        
+    def did_deactivate(self):
+        return super().did_deactivate()
+
+    def will_activate(self):
+        return super().will_activate()
+
+    def did_activate(self):
+        super().did_activate()
+        self.draw(self.renderer.image, self.renderer.draw)
+        self.renderer.enqueue_refresh(
+            refresh=RendererInterface.RefreshRequest(frame=None)
+        )
 
     # ModuleMainView
 

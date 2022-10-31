@@ -18,6 +18,8 @@ class ModuleManager(ModuleManagerInterface):
     def setup_modules(self, configuration):
         super().setup_modules(configuration)
 
+        print(self.renderer)
+
         mod_configs = configuration.raw["modules"]
         for module in self.modules:
             this_mod_config = {}

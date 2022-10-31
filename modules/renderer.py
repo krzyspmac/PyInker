@@ -23,7 +23,7 @@ class Renderer(RendererInterface):
         return self.__draw
 
     def enqueue_refresh(self, refresh: RendererInterface.RefreshRequest):
-        super().enqueue_refresh()
+        super().enqueue_refresh(refresh=refresh)
         pass
 
     def display(self):

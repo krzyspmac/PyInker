@@ -10,12 +10,14 @@ from configuration import Configuration
 from modules.renderer import Renderer
 from modules.modules_manager import ModuleManager
 from modules.mod_main.mod_main import ModuleMainView
+from modules.coordinator import MainViewCoordinator
 
 # Configuration
 configuration: Configuration
 modulesManager: ModuleManager
 displayDevice: DisplayDeviceInterface
 renderer: Renderer
+viewCoordinator: MainViewCoordinator
 
 def setup():
     """Setup the application, load configuration files, etc."""
@@ -23,12 +25,9 @@ def setup():
     global modulesManager
     global renderer
     global displayDevice
+    global viewCoordinator
 
     configuration = Configuration("config.yml")
-
-    modulesManager = ModuleManager()
-    modulesManager.load_modules()
-    modulesManager.setup_modules(configuration=configuration)
 
     displayDevice = DisplayWaveshare()
 
@@ -38,6 +37,18 @@ def setup():
         background=ColorList.get_color("White"),
         displayDevice=displayDevice
         )
+
+    viewCoordinator = MainViewCoordinator()
+    viewCoordinator.setup(
+        configuration=configuration,
+        renderer=renderer
+    )
+
+    modulesManager = ModuleManager()
+    modulesManager.load_modules()
+    modulesManager.register_renderer(renderer=renderer)
+    modulesManager.setup_modules(configuration=configuration)
+
     pass
 
 def prepare_screen():
@@ -53,12 +64,12 @@ def shutdown_screen():
     pass
 
 def draw():
-    view = ModuleMainView()
-    view.setup(renderer=renderer)
-    view.draw(renderer.image, renderer.draw)
+    # view = ModuleMainView()
+    # view.setup(renderer=renderer, viewCoordinator=viewCoordinator)
+    # view.draw(renderer.image, renderer.draw)
 
-    displayDevice.clear()
-    displayDevice.display_full(renderer.image)
+    # displayDevice.clear()
+    # displayDevice.display_full(renderer.image)
     #renderer.image.show()
     pass
 
@@ -72,7 +83,7 @@ def threaded():
 def main(win):
     """The main event queue"""
     thread = Thread(target=threaded)
-    thread.start()
+    #thread.start()
 
     win.nodelay(True)
     key=""
@@ -81,7 +92,9 @@ def main(win):
 
     setup()
     prepare_screen()
-    draw()
+    # draw()
+
+    viewCoordinator.show_main_view()
 
     while 1:         
         time.sleep(1/60)
