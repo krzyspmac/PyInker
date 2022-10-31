@@ -74,15 +74,21 @@ class RendererInterface:
         self.__display = displayDevice
         pass
 
+    def prepare(self):
+        """Prepares the screen if needed"""
+        pass
+
     def enqueue_refresh(self, refresh: RefreshRequest):
         """Enqueue the refresh request. Fullscreen refresh should clear the stack and, in theory,
            no new enqueue refresh requests should not be needed.
         """
         pass
 
-    def display(self):
-        """Perform the draw of the stored image & drawable taking into account the enqueued refresh requests."""
-        pass
+    def dequeue_refresh(self):
+        """Dequeues the top-most refresh request and takes it off the queue.
+           If nothing is left on the queue this returns None.
+        """
+        return None
     
     @property
     def displayDevice(self):

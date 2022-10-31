@@ -92,13 +92,18 @@ def main(win):
 
     setup()
     prepare_screen()
-    # draw()
-
     viewCoordinator.show_main_view()
+
+    renderer.prepare()
 
     while 1:         
         time.sleep(1/60)
         print("Wait\r")
+
+        while renderer.dequeue_refresh() is not None:
+            print("Rendering...\r")
+            pass
+
         try:                 
            key = win.getkey()         
            win.clear()                

@@ -42,6 +42,7 @@ class ModuleMainView(ViewInterface):
         return super().will_activate()
 
     def did_activate(self):
+        print("did activate")
         super().did_activate()
         self.draw(self.renderer.image, self.renderer.draw)
         self.renderer.enqueue_refresh(
