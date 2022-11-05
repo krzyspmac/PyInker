@@ -1,7 +1,10 @@
+base:
+  logger_file: "output.log"
 screen: # Define screen parameters. Check your e-ink setup.
-  width: 800
-  height: 480
-
+  width: 1448
+  height: 1072
+display_driver: # Waveshare IT8951's related setup
+  epd_voltage: -2.18
 colors: # The main colors used across the application. Accessed by `name`.
 - name: "White"
   values: [255, 255, 255]
@@ -12,7 +15,7 @@ colors: # The main colors used across the application. Accessed by `name`.
 
 fonts: # The main fonts used across the application. Accessed by `name`.
 - name: "Default"
-  path: "fonts/Font.ttc"
+  path: "fonts/Roboto-Regular.ttf"
 
 # List of modules. Each module in the folder `modules` can have an entry here and
 # this configuration gets passed to the module itsef.

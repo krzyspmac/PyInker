@@ -10,8 +10,8 @@ class DisplayDeviceInterface:
        The RendererInterface works directly with the `DisplayDeviceInterface`.
     """
 
-    def setup(self):
-        """Perform the setup. Only once."""
+    def setup(self, configuration):
+        """Perform the setup. Only once. Will receive configuration global"""
         pass
 
     def init(self):

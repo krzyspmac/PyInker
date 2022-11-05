@@ -11,6 +11,7 @@ from modules.renderer import Renderer
 from modules.modules_manager import ModuleManager
 from modules.mod_main.mod_main import ModuleMainView
 from modules.coordinator import MainViewCoordinator
+import logging
 
 # Configuration
 configuration: Configuration
@@ -29,8 +30,19 @@ def setup():
 
     configuration = Configuration("config.yml")
 
+    logger_file = configuration.base["logger_file"] or "output.log"
+    logging.basicConfig(
+        filename=logger_file, 
+        encoding='utf-8', 
+        level=logging.DEBUG
+        )
+    logging.basicConfig(format='%(asctime)s %(name)s %(funcName)s %(message)s')
+    logging.info("Booting system...")
+
+    logging.info("Booting Display Driver...")
     displayDevice = DisplayWaveshare()
 
+    logging.info("Booting Renderer...")
     renderer = Renderer(
         width=configuration.screen["width"], 
         height=configuration.screen["height"], 
@@ -38,12 +50,14 @@ def setup():
         displayDevice=displayDevice
         )
 
+    logging.info("Booting View Coordinator...")
     viewCoordinator = MainViewCoordinator()
     viewCoordinator.setup(
         configuration=configuration,
         renderer=renderer
     )
 
+    logging.info("Booting Module Manager")
     modulesManager = ModuleManager()
     modulesManager.load_modules()
     modulesManager.register_renderer(renderer=renderer)
@@ -53,12 +67,17 @@ def setup():
 
 def prepare_screen():
     global displayDevice
-    displayDevice.setup()
+    global configuration
+
+    logging.info("Preparing Screen...")
+    displayDevice.setup(configuration=configuration)
     displayDevice.init()
     pass
 
 def shutdown_screen():
     global displayDevice
+
+    logging.info("Shutting off the screen...")
     displayDevice.clear()
     displayDevice.deinit()
     pass

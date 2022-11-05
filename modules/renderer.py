@@ -12,7 +12,7 @@ class Renderer(RendererInterface):
             "RGB", (width, height), color=background.rgb
         )
         self.__draw = ImageDraw.Draw(self.__image)
-        self.__draw.fontmode = "1" # disable aliasing
+        #self.__draw.fontmode = "1" # disable aliasing
         self.__display = displayDevice
         pass
 

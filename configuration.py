@@ -1,3 +1,4 @@
+from re import S
 import yaml
 from modules.general import FontList
 from modules.general import ColorList
@@ -18,6 +19,10 @@ class Configuration:
     @property
     def raw(self):
         return self._dict
+
+    @property
+    def base(self):
+        return self._dict["base"]
 
     @property
     def screen(self):
