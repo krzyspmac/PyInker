@@ -29,8 +29,19 @@ class Rect:
         return self._height
 
     @property
+    def origin(self):
+        return [self.x, self.y]
+
+    @property
+    def size(self):
+        return [self.width, self.height]
+
+    @property
     def shape(self):
-        return [ (self.x, self.y), (self.x + self.width, self.y + self.height) ]
+        return (self.x, self.y, self.x + self.width, self.y + self.height)
+
+    def __repr__(self):
+        return "(x=" + str(self.x) + ", y=" + str(self.y) + ", w=" + str(self.width) + ", h=" + str(self.height) + ")"
 
     pass # Rect
 

@@ -1,6 +1,8 @@
 from IT8951.display import AutoEPDDisplay
 from IT8951.display import EPD
 from IT8951 import constants
+from IT8951 import img_manip
+
 from modules.modules_interfaces import *
 import logging
 
@@ -51,11 +53,29 @@ class DisplayWaveshare(DisplayDeviceInterface):
         self.__logger.debug("Display full")
         frame = image
         display_dims = [image.width, image.height]
-        self.__display.update(frame.tobytes(), (0,0), display_dims, self.__display_mode, pixel_format=3) #M_8BPP = 3
+        self.__display.update(frame.tobytes(), (0,0), display_dims, self.__display_mode, pixel_format=constants.PixelModes.M_8BPP) #M_8BPP = 3
         pass
 
     def display_partial(self, image: Image, bounds: Rect):
         super().display_partial(image, bounds)
-        self.__logger.debug("Display partial. Not supported yet.")
+        self.__logger.info("Display partial; (x,y)=%s", bounds)
+        
+        mod_image = image.crop(bounds.shape)
+
+        self.__display.update(
+            data=mod_image.tobytes(), 
+            xy=bounds.origin, 
+            dims=bounds.size, 
+            mode=constants.DisplayModes.DU, 
+            pixel_format=constants.PixelModes.M_8BPP
+        )
+
+        # self.__display.update(
+        #     data=image.tobytes(), 
+        #     xy=(bounds.x, bounds.y), 
+        #     dims=(bounds.width, bounds.height), 
+        #     mode=constants.DisplayModes.DU, 
+        #     pixel_format=constants.PixelModes.M_8BPP
+        # )
 
     pass # DisplayWaveshare

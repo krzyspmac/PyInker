@@ -70,17 +70,17 @@ class ModuleMainView(ViewInterface):
             ColorList.get_color("Black").grayscale
         )
         self.__text = "111 ęśćLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
-        self.__index = 20
+        self.__index = 0
 
         pass
 
     def __draw(self, image, draw):
-        self.__textWidget.set_text(self.__text)
+        #self.__textWidget.set_text(self.__text)
         self.__textWidget.draw(draw)
         pass
 
     def __startTimer(self):
-        self.__timer = Timer(5.0, self.__fireTimer)
+        self.__timer = Timer(0.5, self.__fireTimer)
         self.__timer.start()
         pass
 
