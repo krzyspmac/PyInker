@@ -36,9 +36,6 @@ class DisplayWaveshare(DisplayDeviceInterface):
         pass
 
     def clear(self):
-        """"
-        Clear display, device image buffer, and frame buffer (e.g. at startup)
-        """
         super().clear()
         self.__logger.debug("Clear")
         self.__display.clear()
@@ -59,23 +56,18 @@ class DisplayWaveshare(DisplayDeviceInterface):
     def display_partial(self, image: Image, bounds: Rect):
         super().display_partial(image, bounds)
         self.__logger.info("Display partial; (x,y)=%s", bounds)
-        
-        mod_image = image.crop(bounds.shape)
 
         self.__display.update(
-            data=mod_image.tobytes(), 
+            data=image.crop(bounds.shape).tobytes(), 
             xy=bounds.origin, 
             dims=bounds.size, 
             mode=constants.DisplayModes.DU, 
             pixel_format=constants.PixelModes.M_8BPP
         )
+        pass
 
-        # self.__display.update(
-        #     data=image.tobytes(), 
-        #     xy=(bounds.x, bounds.y), 
-        #     dims=(bounds.width, bounds.height), 
-        #     mode=constants.DisplayModes.DU, 
-        #     pixel_format=constants.PixelModes.M_8BPP
-        # )
+    def display_partial_computed(self, image: Image):
+        self.__logger.error("Not supported")
+        pass
 
     pass # DisplayWaveshare

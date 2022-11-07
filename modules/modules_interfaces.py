@@ -35,9 +35,15 @@ class DisplayDeviceInterface:
         pass
 
     def display_full(self, image: Image):
+        """Displays fill image."""
         pass
 
     def display_partial(self, image: Image, bounds: Rect):
+        """Displays partial image given the exact bounds."""
+        pass
+
+    def display_partial_computed(self, image: Image):
+        """Displays partial image trying to auto-compute the changed difference box."""
         pass
 
     pass # DisplayDeviceInterface
