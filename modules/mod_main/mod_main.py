@@ -62,12 +62,12 @@ class ModuleMainView(ViewInterface):
 
     def __setup(self):
         self.__textWidget = TextWidget()
-        self.__textWidget.set_bounds(Rect(100, 100, 400, 200))
+        self.__textWidget.set_bounds(Rect(100, 100, 800, 400))
         self.__textWidget.set_font(
-            FontList.get_font("Default").create(24)
+            FontList.get_font("Default").create(24*2)
         )
         self.__textWidget.set_text_color(
-            ColorList.get_color("Black").rgb
+            ColorList.get_color("Black").grayscale
         )
         self.__text = "111 ęśćLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
         self.__index = 20

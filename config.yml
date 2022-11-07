@@ -7,11 +7,9 @@ display_driver: # Waveshare IT8951's related setup
   epd_voltage: -2.18
 colors: # The main colors used across the application. Accessed by `name`.
 - name: "White"
-  values: [255, 255, 255]
+  values: 255
 - name: "Black"
-  values: [0, 0, 0]
-- name: "Red"
-  values: [255, 0, 0]
+  values: 0
 
 fonts: # The main fonts used across the application. Accessed by `name`.
 - name: "Default"

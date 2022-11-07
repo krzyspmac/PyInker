@@ -9,7 +9,7 @@ class Renderer(RendererInterface):
     def __init__(self, width: int, height: int, background: Color, displayDevice: DisplayDeviceInterface):
         self.__queue = []
         self.__image = Image.new(
-            "RGB", (width, height), color=background.rgb
+            "L", (width, height), 0xFF
         )
         self.__draw = ImageDraw.Draw(self.__image)
         #self.__draw.fontmode = "1" # disable aliasing

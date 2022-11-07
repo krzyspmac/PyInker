@@ -8,7 +8,7 @@ class TextWidget(WidgetInterface):
 
     text = ""
     font = None
-    color = (0, 0, 0)
+    color = (0)
 
     # WidgetInterfaces
 
@@ -34,7 +34,7 @@ class TextWidget(WidgetInterface):
         pass
 
     def draw_me(self, drawObject):
-        drawObject.rectangle(self.bounds.shape, fill=(255, 255, 255), outline=(0, 0, 0))
+        drawObject.rectangle(self.bounds.shape, fill=(255), outline=(0))
         wrapper = textwrap.TextWrapper(width=self.bounds.width) 
         description_wrapped = text_wrap(self.text, self.font, drawObject, self.bounds.width, self.bounds.height)
         drawObject.text( (self.bounds.x, self.bounds.y), description_wrapped, font=self.font, fill=self.color)

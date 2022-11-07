@@ -89,12 +89,12 @@ class ColorList:
 
 class Color:
 
-    def __init__(self, rgb):
-        self._rgb = (rgb[0], rgb[1], rgb[2])
+    def __init__(self, val):
+        self.__val = val
 
     @property
-    def rgb(self):
-        return self._rgb
+    def grayscale(self):
+        return self.__val
 
     pass # Color
 
