@@ -8,8 +8,6 @@ import logging
 
 class DisplayWaveshare(DisplayDeviceInterface):
     """Concrete class for the e-ink Waveshare device."""
-
-    __display_mode = constants.DisplayModes.GC16
     
     def __init__(self):
         self.__logger = logging.getLogger('DisplayWaveshare')
@@ -48,9 +46,13 @@ class DisplayWaveshare(DisplayDeviceInterface):
         super().display_full(image)
 
         self.__logger.debug("Display full")
-        frame = image
-        display_dims = [image.width, image.height]
-        self.__display.update(frame.tobytes(), (0,0), display_dims, self.__display_mode, pixel_format=constants.PixelModes.M_8BPP) #M_8BPP = 3
+        self.__display.update(
+            data=image.tobytes(), 
+            xy=(0,0), 
+            dims=[image.width, image.height], 
+            mode=constants.DisplayModes.GC16, 
+            pixel_format=constants.PixelModes.M_8BPP
+        )
         pass
 
     def display_partial(self, image: Image, bounds: Rect):
