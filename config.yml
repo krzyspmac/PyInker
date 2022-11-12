@@ -4,6 +4,8 @@ screen: # Define screen parameters. Check your e-ink setup.
   width: 1448
   height: 1072
 display_driver: # Waveshare IT8951's related setup
+  is_dummy: True
+  dummy_file: "dummy.jpg"
   epd_voltage: -2.18
 colors: # The main colors used across the application. Accessed by `name`.
 - name: "White"

@@ -80,7 +80,7 @@ class ModuleMainView(ViewInterface):
         pass
 
     def __startTimer(self):
-        self.__timer = Timer(0.5, self.__fireTimer)
+        self.__timer = Timer(5, self.__fireTimer)
         self.__timer.start()
         pass
 

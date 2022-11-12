@@ -29,6 +29,10 @@ class Configuration:
         return self._dict["screen"]
 
     @property
+    def display_driver(self):
+        return self._dict["display_driver"]
+
+    @property
     def fonts(self):
         return self._dict["fonts"]
 

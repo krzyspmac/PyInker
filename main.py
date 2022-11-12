@@ -5,7 +5,8 @@ from threading import Thread
 from PIL import Image, ImageDraw, ImageFont
 from modules.general import *
 from modules.widgets import *
-from display.display_waveshare import *
+# from display.display_waveshare import *
+from display.display_dummy import *
 from configuration import Configuration
 from modules.renderer import Renderer
 from modules.modules_manager import ModuleManager
@@ -31,17 +32,21 @@ def setup():
     configuration = Configuration("config.yml")
 
     logger_file = configuration.base["logger_file"] or "output.log"
-    logging.basicConfig(
-        filename=logger_file, 
-        encoding='utf-8', 
-        format='%(asctime)s %(name)20s %(funcName)20s() - %(message)s',
-        level=logging.DEBUG
-        )
+    # logging.basicConfig(
+    #     filename=logger_file, 
+    #     encoding='utf-8', 
+    #     format='%(asctime)s %(name)20s %(funcName)20s() - %(message)s',
+    #     level=logging.DEBUG
+    #     )
     # logging.basicConfig(format='%(asctime)s %(name)s -- %(funcName)s %(message)s')
     logging.info("Booting system...")
 
     logging.info("Booting Display Driver...")
-    displayDevice = DisplayWaveshare()
+    if configuration.display_driver["is_dummy"] is True:
+        displayDevice = DisplayDummy()
+    else:
+        displayDevice = DisplayWaveshare()
+        pass
 
     logging.info("Booting Renderer...")
     renderer = Renderer(
@@ -69,9 +74,13 @@ def setup():
 def prepare_screen():
     global displayDevice
     global configuration
+    global renderer
 
     logging.info("Preparing Screen...")
-    displayDevice.setup(configuration=configuration)
+    displayDevice.setup(
+        configuration=configuration,
+        image=renderer.image
+    )
     displayDevice.init()
     pass
 
