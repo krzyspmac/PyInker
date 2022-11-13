@@ -76,7 +76,7 @@ class ModuleMainView(ViewInterface):
         self.__index = 0
 
         self.__graphWidget = GraphWidget()
-        self.__graphWidget.set_bounds(Rect(00, 300, 800, 800))
+        self.__graphWidget.set_bounds(Rect(100, 100, 200, 200))
         pass
 
     def __draw(self, image, draw):

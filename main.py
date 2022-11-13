@@ -32,12 +32,11 @@ def setup():
     configuration = Configuration("config.yml")
 
     logger_file = configuration.base["logger_file"] or "output.log"
-    # logging.basicConfig(
-    #     filename=logger_file, 
-    #     encoding='utf-8', 
-    #     format='%(asctime)s %(name)20s %(funcName)20s() - %(message)s',
-    #     level=logging.DEBUG
-    #     )
+    logging.basicConfig(
+        filename=logger_file,
+        format='%(asctime)s %(name)s -- %(funcName)s %(message)s',
+        level=logging.DEBUG
+        )
     # logging.basicConfig(format='%(asctime)s %(name)s -- %(funcName)s %(message)s')
     logging.info("Booting system...")
 
