@@ -23,3 +23,5 @@ modules:
   mod_weather:
     conector: "OpenWeatherConnector"
     key: "97aef813e5e76ac11aa56982cd0732a9"
+    lat: 52.2297
+    lon: 21.0122

@@ -1,20 +1,7 @@
 from ..modules_interfaces import ModuleInterface
 from ..modules_manager import ModuleManager
-
+from .mod_weather_interfaces import ModuleWeatherConnectorInterface
 import logging
-
-class ModuleWeatherConnectorInterface:
-    """Defines the interface for the various weather connectors"""
-
-    def setup(self, configuration):
-        """Recieve the configuration from yaml"""
-        pass
-
-    def download(self, lambda_result):
-        """Performs the data download and parses it into the appropriate format"""
-        pass
-
-    pass # ModuleWeatherConnector
 
 class ModuleWeather(ModuleInterface):
 
@@ -29,11 +16,17 @@ class ModuleWeather(ModuleInterface):
 
     def setup(self, configuration):
         super().setup(configuration)
-        connector_name = configuration["conector"]
-        self.__initialize_connector(connector_name, configuration)
+        self.__setup(configuration)
         pass
 
     # ModuleWeather
+
+    def __setup(self, configuration):
+        self.__initialize_connector(
+            connector_name=configuration["conector"],
+            configuration=configuration
+        )
+        pass
 
     def __initialize_connector(self, connector_name: str, configuration):
         self.__logger.info("Connector name = %s", connector_name)
