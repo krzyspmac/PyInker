@@ -39,5 +39,9 @@ class Configuration:
     @property
     def colors(self):
         return self._dict["colors"]
+    
+    @property
+    def modules(self):
+        return self._dict["modules"]
 
     pass # Configuration

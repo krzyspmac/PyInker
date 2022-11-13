@@ -21,4 +21,5 @@ fonts: # The main fonts used across the application. Accessed by `name`.
 # this configuration gets passed to the module itsef.
 modules:
   mod_weather:
-    key: ""
+    conector: "OpenWeatherConnector"
+    key: "97aef813e5e76ac11aa56982cd0732a9"

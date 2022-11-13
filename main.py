@@ -35,7 +35,7 @@ def setup():
     logging.basicConfig(
         filename=logger_file,
         format='%(asctime)s %(name)s -- %(funcName)s %(message)s',
-        level=logging.DEBUG
+        level=logging.INFO
         )
     # logging.basicConfig(format='%(asctime)s %(name)s -- %(funcName)s %(message)s')
     logging.info("Booting system...")
