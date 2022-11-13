@@ -30,7 +30,7 @@ class Rect:
 
     @property
     def origin(self):
-        return [self.x, self.y]
+        return (self.x, self.y)
 
     @property
     def size(self):

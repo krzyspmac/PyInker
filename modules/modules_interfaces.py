@@ -240,13 +240,15 @@ class WidgetInterface:
        A widget is defined by existing within a view, taking a specific amount
        of it defined by the bounds. A widget has the option to draw itself.
     """
+    __bounds: Rect = Rect.zero
+
     @property
     def bounds(self):
-        return self._bounds
+        return self.__bounds
 
     @bounds.setter
     def bounds(self, val):
-        self._bounds = val
+        self.__bounds = val
 
     def set_config(self, config: dict):
         """Receive the configuration.
@@ -259,8 +261,8 @@ class WidgetInterface:
         self.bounds = bounds
         pass
 
-    def draw(self, drawObject):
-        """Draws the widget"""
+    def draw(self, image:Image, drawObject):
+        """Draws the widget. Use the image or the draw object."""
         pass
 
     pass # WidgetInterface

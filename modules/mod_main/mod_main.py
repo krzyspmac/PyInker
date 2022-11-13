@@ -1,6 +1,7 @@
 from ..modules_interfaces import *
 from ..modules_manager import ModuleManager
 from ..widgets import TextWidget, ViewInterface
+from ..mod_graphs.mod_graphs import GraphWidget
 from ..general import *
 from threading import Thread
 from threading import Timer
@@ -25,6 +26,8 @@ class ModuleMainView(ViewInterface):
     __textWidget: TextWidget
     __text: str
     __index: int
+
+    __graphWidget: GraphWidget
 
     # ViewInterface
 
@@ -72,11 +75,14 @@ class ModuleMainView(ViewInterface):
         self.__text = "111 ęśćLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
         self.__index = 0
 
+        self.__graphWidget = GraphWidget()
+        self.__graphWidget.set_bounds(Rect(00, 300, 800, 800))
         pass
 
     def __draw(self, image, draw):
         #self.__textWidget.set_text(self.__text)
-        self.__textWidget.draw(draw)
+        self.__textWidget.draw(image, draw)
+        self.__graphWidget.draw(image, draw)
         pass
 
     def __startTimer(self):

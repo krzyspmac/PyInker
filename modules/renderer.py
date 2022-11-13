@@ -17,7 +17,7 @@ class Renderer(RendererInterface):
         pass
 
     @property
-    def image(self):
+    def image(self) -> Image:
         return self.__image
 
     @property

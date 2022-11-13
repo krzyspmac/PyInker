@@ -10,3 +10,6 @@ https://www.waveshare.com/wiki/6inch_HD_e-Paper_HAT
 
 - Python Drivers written GregDMeyer
 https://github.com/GregDMeyer/IT8951
+
+- Python matplotlib
+pip3 install matplotlib

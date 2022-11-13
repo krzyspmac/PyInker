@@ -12,8 +12,8 @@ class TextWidget(WidgetInterface):
 
     # WidgetInterfaces
 
-    def draw(self, drawObject):
-        self.draw_me(drawObject)
+    def draw(self, image: Image, drawObject):
+        self.draw_me(image, drawObject)
         pass
 
     # TextWidget
@@ -33,7 +33,7 @@ class TextWidget(WidgetInterface):
         self.color = color
         pass
 
-    def draw_me(self, drawObject):
+    def draw_me(self, image: Image, drawObject):
         drawObject.rectangle(self.bounds.shape, fill=(255), outline=(0))
         wrapper = textwrap.TextWrapper(width=self.bounds.width) 
         description_wrapped = text_wrap(self.text, self.font, drawObject, self.bounds.width, self.bounds.height)
