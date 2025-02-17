@@ -1,16 +1,27 @@
 from ..modules_interfaces import ModuleInterface
 from ..modules_manager import ModuleManager
 from .mod_weather_interfaces import ModuleWeatherConnectorInterface
+from .mod_weather_interfaces import ModuleWeatherData
 import logging
 
 class ModuleWeather(ModuleInterface):
 
+    # Singleton
+
+    __instance = None
+
+    @staticmethod
+    def shared():
+        return ModuleWeather.__instance
+
     __connector: ModuleWeatherConnectorInterface
+    __downloaded_data: ModuleWeatherData = None
 
     # ModuleInterface
 
     def __init__(self) -> None:
         super().__init__()
+        ModuleWeather.__instance = self
         self.__logger = logging.getLogger('ModuleWeather')
         pass
 
@@ -45,9 +56,16 @@ class ModuleWeather(ModuleInterface):
         pass
 
     def __download_finish(self, data):
-        self.__logger.info("result = %s", data)
+        self.__downloaded_data = data
+        self.__logger.info("result = %s", self.__downloaded_data)
         self.__logger.info("download_done")
+
+        # On download update info on the graph
+
         pass
+
+    def get_data(self) -> ModuleWeatherData:
+        return self.__downloaded_data
 
     def __repr__(self):
         return 'ModuleWeather!'

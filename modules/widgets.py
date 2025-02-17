@@ -3,12 +3,18 @@ import textwrap
 from .general import Rect
 from .general import text_wrap
 from .modules_interfaces import *
+import logging
 
 class TextWidget(WidgetInterface):
 
     text = ""
     font = None
     color = (0)
+    
+    def __init__(self) -> None:
+        super().__init__()
+        self.__logger = logging.getLogger('TextWidget')
+        pass
 
     # WidgetInterfaces
 
@@ -27,10 +33,12 @@ class TextWidget(WidgetInterface):
 
     def set_font(self, font):
         self.font = font
+        self.__logger.info("font = %s", font)
         pass
 
     def set_text_color(self, color):
         self.color = color
+        self.__logger.info("color = %s", color)
         pass
 
     def draw_me(self, image: Image, drawObject):

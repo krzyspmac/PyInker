@@ -97,6 +97,11 @@ class RendererInterface:
            If nothing is left on the queue this returns None.
         """
         return None
+
+    def sleep(self):
+        """Sleeps the display
+        """
+        return None
     
     @property
     def displayDevice(self):

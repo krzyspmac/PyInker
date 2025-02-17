@@ -2,10 +2,12 @@ from ..modules_interfaces import *
 from ..modules_manager import ModuleManager
 from ..widgets import TextWidget, ViewInterface
 from ..mod_graphs.mod_graphs import GraphWidget
+from ..mod_weather.mod_weather import ModuleWeather
 from ..general import *
 from threading import Thread
 from threading import Timer
 import time
+import logging
 
 class ModuleMain(ModuleInterface):
 
@@ -33,6 +35,7 @@ class ModuleMainView(ViewInterface):
 
     def setup(self, renderer: RendererInterface, viewCoordinator: ViewCoordinator, configuration):
         super().setup(renderer=renderer, viewCoordinator=viewCoordinator, configuration=configuration)
+        self.__logger = logging.getLogger('ModuleMainView')
         self.__setup()
         pass
 
@@ -73,20 +76,37 @@ class ModuleMainView(ViewInterface):
             ColorList.get_color("Black").grayscale
         )
         self.__text = "111 ęśćLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
-        self.__index = 0
+        self.__index = 10
 
         self.__graphWidget = GraphWidget()
-        self.__graphWidget.set_bounds(Rect(100, 100, 200, 200))
+        self.__graphWidget.set_bounds(Rect(100, 100, 1000, 800))
         pass
 
     def __draw(self, image, draw):
+        
         #self.__textWidget.set_text(self.__text)
+        mod_weather_shared = ModuleWeather.shared()
+        self.__logger.info("Shared instance of mod_weather = %s", mod_weather_shared)
+        weather_data = mod_weather_shared.get_data()
+        if weather_data != None:
+            counter: int = -1
+            def lll(item, counter):
+                counter += 1
+                return counter
+            x_axis = range(len(weather_data.items))
+            x_labels = list(map(lambda item: "{hours}:{minutes}".format(hours = item.dt.hour, minutes = item.dt.minute), weather_data.items))
+            y_axis = list(map(lambda item: item.temp, weather_data.items))
+            self.__logger.info("X axis = %s", x_axis)
+            self.__logger.info("X axis = %s", y_axis)
+            self.__graphWidget.set_data(x_axis, x_labels, y_axis)
+            self.__graphWidget.draw(image, draw)
+        
         self.__textWidget.draw(image, draw)
-        self.__graphWidget.draw(image, draw)
+        self.__textWidget.set_text(self.__text)
         pass
 
     def __startTimer(self):
-        self.__timer = Timer(5, self.__fireTimer)
+        self.__timer = Timer(1.5, self.__fireTimer)
         self.__timer.start()
         pass
 
@@ -101,9 +121,13 @@ class ModuleMainView(ViewInterface):
         self.__textWidget.set_text(self.__text[:self.__index])
         self.__index += 1
         self.__redraw()
+
+        
+
         # self.set_needs_update(True)
         #self.renderer.enqueue_refresh(RendererInterface.RefreshRequest(frame=None))
         self.renderer.enqueue_refresh(RendererInterface.RefreshRequest(frame=self.__textWidget.bounds))
+        #self.renderer.sleep()
 
         if self.is_active:
             self.__startTimer()

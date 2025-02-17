@@ -51,6 +51,10 @@ class Renderer(RendererInterface):
         
         pass
 
+    def sleep(self):
+        super().sleep()
+        self.display.sleep()
+
     def __push(self, item: RendererInterface.RefreshRequest):
         self.__queue.append(item)
 
@@ -68,9 +72,11 @@ class Renderer(RendererInterface):
             if frame is not None:
                 print("Render partial\r")
                 self.display.display_partial(self.image, bounds=frame)
+                print("Render partial done\r")
             else:
                 print("Render full\r")
                 self.display.display_full(self.image)
+                print("Render full done\r")
         pass
 
     @property

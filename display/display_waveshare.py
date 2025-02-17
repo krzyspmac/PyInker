@@ -13,7 +13,7 @@ class DisplayWaveshare(DisplayDeviceInterface):
         self.__logger = logging.getLogger('DisplayWaveshare')
 
     def setup(self, configuration, image: Image):
-        super().setup(configuration)
+        super().setup(configuration, image)
         self.__logger.info("Setting IT8951 display")
         self.__voltage = configuration.raw["display_driver"]["epd_voltage"]
         pass

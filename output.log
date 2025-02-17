@@ -1,0 +1,383 @@
+2023-05-16 10:14:37,477                 root -                setup() Booting system...
+2023-05-16 10:14:37,477                 root -                setup() Booting Display Driver...
+2023-05-16 10:14:37,554                 root -                setup() Booting Renderer...
+2023-05-16 10:14:37,554                 root -                setup() Booting View Coordinator...
+2023-05-16 10:14:37,554           TextWidget -             set_font() font = <PIL.ImageFont.FreeTypeFont object at 0x119554df0>
+2023-05-16 10:14:37,554           TextWidget -       set_text_color() color = 0
+2023-05-16 10:14:37,589                 root -                setup() Booting Module Manager
+2023-05-16 10:14:37,589        ModuleWeather - __initialize_connector() Connector name = OpenWeatherConnector
+2023-05-16 10:14:37,589        ModuleWeather - __initialize_connector() Connector instance = <modules.mod_weather.mod_weather_connector_openweather.OpenWeatherConnector object at 0x11bf46a90>
+2023-05-16 10:14:37,589 OpenWeatherConnector -                setup() Configuration = {'conector': 'OpenWeatherConnector', 'key': '97aef813e5e76ac11aa56982cd0732a9', 'lat': 52.2297, 'lon': 21.0122}
+2023-05-16 10:14:37,589 OpenWeatherConnector -                setup() OpenWeather API Key = 97aef813e5e76ac11aa56982cd0732a9
+2023-05-16 10:14:37,590 OpenWeatherConnector -           __threaded() OpenWeather API thread starting...
+2023-05-16 10:14:37,590                 root -       prepare_screen() Preparing Screen...
+2023-05-16 10:14:37,590         DisplayDummy -                setup() Setting dummy display
+2023-05-16 10:14:37,601         DisplayDummy -                 init() Initializing dummy display
+2023-05-16 10:15:07,087                 root -                setup() Booting system...
+2023-05-16 10:15:07,087                 root -                setup() Booting Display Driver...
+2023-05-16 10:15:07,160                 root -                setup() Booting Renderer...
+2023-05-16 10:15:07,160                 root -                setup() Booting View Coordinator...
+2023-05-16 10:15:07,160           TextWidget -             set_font() font = <PIL.ImageFont.FreeTypeFont object at 0x118f9cdf0>
+2023-05-16 10:15:07,161           TextWidget -       set_text_color() color = 0
+2023-05-16 10:15:07,192                 root -                setup() Booting Module Manager
+2023-05-16 10:15:07,193        ModuleWeather - __initialize_connector() Connector name = OpenWeatherConnector
+2023-05-16 10:15:07,193        ModuleWeather - __initialize_connector() Connector instance = <modules.mod_weather.mod_weather_connector_openweather.OpenWeatherConnector object at 0x11969ba90>
+2023-05-16 10:15:07,193 OpenWeatherConnector -                setup() Configuration = {'conector': 'OpenWeatherConnector', 'key': '97aef813e5e76ac11aa56982cd0732a9', 'lat': 52.2297, 'lon': 21.0122}
+2023-05-16 10:15:07,193 OpenWeatherConnector -                setup() OpenWeather API Key = 97aef813e5e76ac11aa56982cd0732a9
+2023-05-16 10:15:07,193 OpenWeatherConnector -           __threaded() OpenWeather API thread starting...
+2023-05-16 10:15:07,193                 root -       prepare_screen() Preparing Screen...
+2023-05-16 10:15:07,193         DisplayDummy -                setup() Setting dummy display
+2023-05-16 10:15:07,204         DisplayDummy -                 init() Initializing dummy display
+2023-05-16 10:15:19,014                 root -                setup() Booting system...
+2023-05-16 10:15:19,014                 root -                setup() Booting Display Driver...
+2023-05-16 10:15:19,085                 root -                setup() Booting Renderer...
+2023-05-16 10:15:19,085                 root -                setup() Booting View Coordinator...
+2023-05-16 10:15:19,085           TextWidget -             set_font() font = <PIL.ImageFont.FreeTypeFont object at 0x11ea10df0>
+2023-05-16 10:15:19,085           TextWidget -       set_text_color() color = 0
+2023-05-16 10:15:19,116                 root -                setup() Booting Module Manager
+2023-05-16 10:15:19,116        ModuleWeather - __initialize_connector() Connector name = OpenWeatherConnector
+2023-05-16 10:15:19,116        ModuleWeather - __initialize_connector() Connector instance = <modules.mod_weather.mod_weather_connector_openweather.OpenWeatherConnector object at 0x11f48ba90>
+2023-05-16 10:15:19,116 OpenWeatherConnector -                setup() Configuration = {'conector': 'OpenWeatherConnector', 'key': '97aef813e5e76ac11aa56982cd0732a9', 'lat': 52.2297, 'lon': 21.0122}
+2023-05-16 10:15:19,117 OpenWeatherConnector -                setup() OpenWeather API Key = 97aef813e5e76ac11aa56982cd0732a9
+2023-05-16 10:15:19,117 OpenWeatherConnector -           __threaded() OpenWeather API thread starting...
+2023-05-16 10:15:19,117                 root -       prepare_screen() Preparing Screen...
+2023-05-16 10:15:19,117         DisplayDummy -                setup() Setting dummy display
+2023-05-16 10:15:19,128         DisplayDummy -                 init() Initializing dummy display
+2023-05-16 10:15:24,122 OpenWeatherConnector -           __threaded() OpenWeather API thread waiting...
+2023-05-16 10:15:24,123 OpenWeatherConnector -           __threaded() OpenWeather API loading url https://api.openweathermap.org/data/2.5/forecast?id=524901&appid=97aef813e5e76ac11aa56982cd0732a9&&units=metric&lat=52.2297&lon=52.2297
+2023-05-16 10:15:24,176         DisplayDummy -      display_partial() Display partial; (x,y)=(x=100, y=100, w=800, h=400)
+2023-05-16 10:15:24,401 OpenWeatherConnector -            __convert() OpenWeather API data convertion...
+2023-05-16 10:15:24,402 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-16 09:00:00, temp=20.41, feel_like=19.39)
+2023-05-16 10:15:24,402 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-16 12:00:00, temp=20.48, feel_like=19.5)
+2023-05-16 10:15:24,402 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-16 15:00:00, temp=18.24, feel_like=17.4)
+2023-05-16 10:15:24,402 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-16 18:00:00, temp=14.61, feel_like=13.88)
+2023-05-16 10:15:24,402 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-16 21:00:00, temp=13.39, feel_like=12.61)
+2023-05-16 10:15:24,402 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-17 00:00:00, temp=13.09, feel_like=12.2)
+2023-05-16 10:15:24,402 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-17 03:00:00, temp=14.29, feel_like=13.47)
+2023-05-16 10:15:24,402 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-17 06:00:00, temp=19.13, feel_like=18.22)
+2023-05-16 10:15:24,402 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-17 09:00:00, temp=20.78, feel_like=19.88)
+2023-05-16 10:15:24,403 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-17 12:00:00, temp=21.11, feel_like=20.35)
+2023-05-16 10:15:24,403 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-17 15:00:00, temp=16.95, feel_like=16.22)
+2023-05-16 10:15:24,403 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-17 18:00:00, temp=13.55, feel_like=12.79)
+2023-05-16 10:15:24,403 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-17 21:00:00, temp=12.46, feel_like=11.59)
+2023-05-16 10:15:24,403 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-18 00:00:00, temp=11.29, feel_like=10.35)
+2023-05-16 10:15:24,403 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-18 03:00:00, temp=13.13, feel_like=12.14)
+2023-05-16 10:15:24,403 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-18 06:00:00, temp=13.46, feel_like=12.43)
+2023-05-16 10:15:24,403 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-18 09:00:00, temp=14.68, feel_like=13.61)
+2023-05-16 10:15:24,403 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-18 12:00:00, temp=16.76, feel_like=15.93)
+2023-05-16 10:15:24,403 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-18 15:00:00, temp=14.92, feel_like=14.03)
+2023-05-16 10:15:24,403 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-18 18:00:00, temp=11.65, feel_like=10.65)
+2023-05-16 10:15:24,403 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-18 21:00:00, temp=7.72, feel_like=5.07)
+2023-05-16 10:15:24,403 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-19 00:00:00, temp=6.4, feel_like=3.57)
+2023-05-16 10:15:24,403 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-19 03:00:00, temp=9.4, feel_like=6.61)
+2023-05-16 10:15:24,403 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-19 06:00:00, temp=9.46, feel_like=6.62)
+2023-05-16 10:15:24,403 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-19 09:00:00, temp=9.1, feel_like=6.33)
+2023-05-16 10:15:24,403 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-19 12:00:00, temp=9.61, feel_like=6.96)
+2023-05-16 10:15:24,403 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-19 15:00:00, temp=9.28, feel_like=6.56)
+2023-05-16 10:15:24,403 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-19 18:00:00, temp=9.48, feel_like=6.35)
+2023-05-16 10:15:24,403 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-19 21:00:00, temp=9.44, feel_like=6.57)
+2023-05-16 10:15:24,403 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-20 00:00:00, temp=9.19, feel_like=6.52)
+2023-05-16 10:15:24,403 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-20 03:00:00, temp=10.08, feel_like=9.44)
+2023-05-16 10:15:24,403 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-20 06:00:00, temp=11.34, feel_like=10.78)
+2023-05-16 10:15:24,403 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-20 09:00:00, temp=15.89, feel_like=15.36)
+2023-05-16 10:15:24,403 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-20 12:00:00, temp=16.55, feel_like=16.01)
+2023-05-16 10:15:24,403 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-20 15:00:00, temp=16.46, feel_like=15.99)
+2023-05-16 10:15:24,403 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-20 18:00:00, temp=12.94, feel_like=12.48)
+2023-05-16 10:15:24,403 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-20 21:00:00, temp=11.69, feel_like=11.16)
+2023-05-16 10:15:24,403 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-21 00:00:00, temp=11.39, feel_like=10.8)
+2023-05-16 10:15:24,403 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-21 03:00:00, temp=14.53, feel_like=13.97)
+2023-05-16 10:15:24,403 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-21 06:00:00, temp=19.09, feel_like=18.6)
+2023-05-16 10:15:24,403        ModuleWeather -    __download_finish() result = <modules.mod_weather.mod_weather_interfaces.ModuleWeatherData object at 0x12bf6be20>
+2023-05-16 10:15:24,403        ModuleWeather -    __download_finish() download_done
+2023-05-16 10:15:44,607                 root -                setup() Booting system...
+2023-05-16 10:15:44,607                 root -                setup() Booting Display Driver...
+2023-05-16 10:15:44,672                 root -                setup() Booting Renderer...
+2023-05-16 10:15:44,672                 root -                setup() Booting View Coordinator...
+2023-05-16 10:15:44,673           TextWidget -             set_font() font = <PIL.ImageFont.FreeTypeFont object at 0x11bc4fe20>
+2023-05-16 10:15:44,673           TextWidget -       set_text_color() color = 0
+2023-05-16 10:15:44,703                 root -                setup() Booting Module Manager
+2023-05-16 10:15:44,704        ModuleWeather - __initialize_connector() Connector name = OpenWeatherConnector
+2023-05-16 10:15:44,704        ModuleWeather - __initialize_connector() Connector instance = <modules.mod_weather.mod_weather_connector_openweather.OpenWeatherConnector object at 0x120df7ac0>
+2023-05-16 10:15:44,704 OpenWeatherConnector -                setup() Configuration = {'conector': 'OpenWeatherConnector', 'key': '97aef813e5e76ac11aa56982cd0732a9', 'lat': 52.2297, 'lon': 21.0122}
+2023-05-16 10:15:44,704 OpenWeatherConnector -                setup() OpenWeather API Key = 97aef813e5e76ac11aa56982cd0732a9
+2023-05-16 10:15:44,704 OpenWeatherConnector -           __threaded() OpenWeather API thread starting...
+2023-05-16 10:15:44,704                 root -       prepare_screen() Preparing Screen...
+2023-05-16 10:15:44,704         DisplayDummy -                setup() Setting dummy display
+2023-05-16 10:15:44,715         DisplayDummy -                 init() Initializing dummy display
+2023-05-16 10:15:49,709 OpenWeatherConnector -           __threaded() OpenWeather API thread waiting...
+2023-05-16 10:15:49,710 OpenWeatherConnector -           __threaded() OpenWeather API loading url https://api.openweathermap.org/data/2.5/forecast?id=524901&appid=97aef813e5e76ac11aa56982cd0732a9&&units=metric&lat=52.2297&lon=52.2297
+2023-05-16 10:15:49,763         DisplayDummy -      display_partial() Display partial; (x,y)=(x=100, y=100, w=800, h=400)
+2023-05-16 10:15:49,966 OpenWeatherConnector -            __convert() OpenWeather API data convertion...
+2023-05-16 10:15:49,967 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-16 09:00:00, temp=20.41, feel_like=19.39)
+2023-05-16 10:15:49,967 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-16 12:00:00, temp=20.48, feel_like=19.5)
+2023-05-16 10:15:49,967 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-16 15:00:00, temp=18.24, feel_like=17.4)
+2023-05-16 10:15:49,967 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-16 18:00:00, temp=14.61, feel_like=13.88)
+2023-05-16 10:15:49,968 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-16 21:00:00, temp=13.39, feel_like=12.61)
+2023-05-16 10:15:49,968 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-17 00:00:00, temp=13.09, feel_like=12.2)
+2023-05-16 10:15:49,968 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-17 03:00:00, temp=14.29, feel_like=13.47)
+2023-05-16 10:15:49,968 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-17 06:00:00, temp=19.13, feel_like=18.22)
+2023-05-16 10:15:49,968 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-17 09:00:00, temp=20.78, feel_like=19.88)
+2023-05-16 10:15:49,968 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-17 12:00:00, temp=21.11, feel_like=20.35)
+2023-05-16 10:15:49,969 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-17 15:00:00, temp=16.95, feel_like=16.22)
+2023-05-16 10:15:49,969 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-17 18:00:00, temp=13.55, feel_like=12.79)
+2023-05-16 10:15:49,969 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-17 21:00:00, temp=12.46, feel_like=11.59)
+2023-05-16 10:15:49,969 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-18 00:00:00, temp=11.29, feel_like=10.35)
+2023-05-16 10:15:49,969 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-18 03:00:00, temp=13.13, feel_like=12.14)
+2023-05-16 10:15:49,969 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-18 06:00:00, temp=13.46, feel_like=12.43)
+2023-05-16 10:15:49,970 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-18 09:00:00, temp=14.68, feel_like=13.61)
+2023-05-16 10:15:49,970 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-18 12:00:00, temp=16.76, feel_like=15.93)
+2023-05-16 10:15:49,970 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-18 15:00:00, temp=14.92, feel_like=14.03)
+2023-05-16 10:15:49,970 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-18 18:00:00, temp=11.65, feel_like=10.65)
+2023-05-16 10:15:49,970 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-18 21:00:00, temp=7.72, feel_like=5.07)
+2023-05-16 10:15:49,971 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-19 00:00:00, temp=6.4, feel_like=3.57)
+2023-05-16 10:15:49,971 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-19 03:00:00, temp=9.4, feel_like=6.61)
+2023-05-16 10:15:49,971 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-19 06:00:00, temp=9.46, feel_like=6.62)
+2023-05-16 10:15:49,971 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-19 09:00:00, temp=9.1, feel_like=6.33)
+2023-05-16 10:15:49,971 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-19 12:00:00, temp=9.61, feel_like=6.96)
+2023-05-16 10:15:49,971 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-19 15:00:00, temp=9.28, feel_like=6.56)
+2023-05-16 10:15:49,971 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-19 18:00:00, temp=9.48, feel_like=6.35)
+2023-05-16 10:15:49,971 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-19 21:00:00, temp=9.44, feel_like=6.57)
+2023-05-16 10:15:49,971 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-20 00:00:00, temp=9.19, feel_like=6.52)
+2023-05-16 10:15:49,972 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-20 03:00:00, temp=10.08, feel_like=9.44)
+2023-05-16 10:15:49,972 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-20 06:00:00, temp=11.34, feel_like=10.78)
+2023-05-16 10:15:49,972 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-20 09:00:00, temp=15.89, feel_like=15.36)
+2023-05-16 10:15:49,972 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-20 12:00:00, temp=16.55, feel_like=16.01)
+2023-05-16 10:15:49,972 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-20 15:00:00, temp=16.46, feel_like=15.99)
+2023-05-16 10:15:49,972 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-20 18:00:00, temp=12.94, feel_like=12.48)
+2023-05-16 10:15:49,972 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-20 21:00:00, temp=11.69, feel_like=11.16)
+2023-05-16 10:15:49,972 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-21 00:00:00, temp=11.39, feel_like=10.8)
+2023-05-16 10:15:49,972 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-21 03:00:00, temp=14.53, feel_like=13.97)
+2023-05-16 10:15:49,972 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-21 06:00:00, temp=19.09, feel_like=18.6)
+2023-05-16 10:15:49,972        ModuleWeather -    __download_finish() result = <modules.mod_weather.mod_weather_interfaces.ModuleWeatherData object at 0x121c48e50>
+2023-05-16 10:15:49,973        ModuleWeather -    __download_finish() download_done
+2023-05-16 10:16:15,356                 root -                setup() Booting system...
+2023-05-16 10:16:15,356                 root -                setup() Booting Display Driver...
+2023-05-16 10:16:15,430                 root -                setup() Booting Renderer...
+2023-05-16 10:16:15,430                 root -                setup() Booting View Coordinator...
+2023-05-16 10:16:15,430           TextWidget -             set_font() font = <PIL.ImageFont.FreeTypeFont object at 0x1259cee20>
+2023-05-16 10:16:15,430           TextWidget -       set_text_color() color = 0
+2023-05-16 10:16:15,461                 root -                setup() Booting Module Manager
+2023-05-16 10:16:15,462        ModuleWeather - __initialize_connector() Connector name = OpenWeatherConnector
+2023-05-16 10:16:15,462        ModuleWeather - __initialize_connector() Connector instance = <modules.mod_weather.mod_weather_connector_openweather.OpenWeatherConnector object at 0x127d9aac0>
+2023-05-16 10:16:15,462 OpenWeatherConnector -                setup() Configuration = {'conector': 'OpenWeatherConnector', 'key': '97aef813e5e76ac11aa56982cd0732a9', 'lat': 52.2297, 'lon': 21.0122}
+2023-05-16 10:16:15,462 OpenWeatherConnector -                setup() OpenWeather API Key = 97aef813e5e76ac11aa56982cd0732a9
+2023-05-16 10:16:15,462 OpenWeatherConnector -           __threaded() OpenWeather API thread starting...
+2023-05-16 10:16:15,462                 root -       prepare_screen() Preparing Screen...
+2023-05-16 10:16:15,462         DisplayDummy -                setup() Setting dummy display
+2023-05-16 10:16:15,474         DisplayDummy -                 init() Initializing dummy display
+2023-05-16 10:16:40,059                 root -                setup() Booting system...
+2023-05-16 10:16:40,059                 root -                setup() Booting Display Driver...
+2023-05-16 10:16:40,130                 root -                setup() Booting Renderer...
+2023-05-16 10:16:40,130                 root -                setup() Booting View Coordinator...
+2023-05-16 10:16:40,130           TextWidget -             set_font() font = <PIL.ImageFont.FreeTypeFont object at 0x11c58fe20>
+2023-05-16 10:16:40,130           TextWidget -       set_text_color() color = 0
+2023-05-16 10:16:40,160                 root -                setup() Booting Module Manager
+2023-05-16 10:16:40,161        ModuleWeather - __initialize_connector() Connector name = OpenWeatherConnector
+2023-05-16 10:16:40,161        ModuleWeather - __initialize_connector() Connector instance = <modules.mod_weather.mod_weather_connector_openweather.OpenWeatherConnector object at 0x11f6eaac0>
+2023-05-16 10:16:40,161 OpenWeatherConnector -                setup() Configuration = {'conector': 'OpenWeatherConnector', 'key': '97aef813e5e76ac11aa56982cd0732a9', 'lat': 52.2297, 'lon': 21.0122}
+2023-05-16 10:16:40,161 OpenWeatherConnector -                setup() OpenWeather API Key = 97aef813e5e76ac11aa56982cd0732a9
+2023-05-16 10:16:40,161 OpenWeatherConnector -           __threaded() OpenWeather API thread starting...
+2023-05-16 10:16:40,161                 root -       prepare_screen() Preparing Screen...
+2023-05-16 10:16:40,161         DisplayDummy -                setup() Setting dummy display
+2023-05-16 10:16:40,172         DisplayDummy -                 init() Initializing dummy display
+2023-05-16 10:16:45,166 OpenWeatherConnector -           __threaded() OpenWeather API thread waiting...
+2023-05-16 10:16:45,167 OpenWeatherConnector -           __threaded() OpenWeather API loading url https://api.openweathermap.org/data/2.5/forecast?id=524901&appid=97aef813e5e76ac11aa56982cd0732a9&&units=metric&lat=52.2297&lon=52.2297
+2023-05-16 10:16:45,371 OpenWeatherConnector -            __convert() OpenWeather API data convertion...
+2023-05-16 10:16:45,371 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-16 09:00:00, temp=20.41, feel_like=19.39)
+2023-05-16 10:16:45,371 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-16 12:00:00, temp=20.48, feel_like=19.5)
+2023-05-16 10:16:45,371 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-16 15:00:00, temp=18.24, feel_like=17.4)
+2023-05-16 10:16:45,371 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-16 18:00:00, temp=14.61, feel_like=13.88)
+2023-05-16 10:16:45,371 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-16 21:00:00, temp=13.39, feel_like=12.61)
+2023-05-16 10:16:45,371 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-17 00:00:00, temp=13.09, feel_like=12.2)
+2023-05-16 10:16:45,371 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-17 03:00:00, temp=14.29, feel_like=13.47)
+2023-05-16 10:16:45,371 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-17 06:00:00, temp=19.13, feel_like=18.22)
+2023-05-16 10:16:45,371 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-17 09:00:00, temp=20.78, feel_like=19.88)
+2023-05-16 10:16:45,371 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-17 12:00:00, temp=21.11, feel_like=20.35)
+2023-05-16 10:16:45,371 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-17 15:00:00, temp=16.95, feel_like=16.22)
+2023-05-16 10:16:45,371 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-17 18:00:00, temp=13.55, feel_like=12.79)
+2023-05-16 10:16:45,371 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-17 21:00:00, temp=12.46, feel_like=11.59)
+2023-05-16 10:16:45,371 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-18 00:00:00, temp=11.29, feel_like=10.35)
+2023-05-16 10:16:45,372 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-18 03:00:00, temp=13.13, feel_like=12.14)
+2023-05-16 10:16:45,372 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-18 06:00:00, temp=13.46, feel_like=12.43)
+2023-05-16 10:16:45,372 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-18 09:00:00, temp=14.68, feel_like=13.61)
+2023-05-16 10:16:45,372 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-18 12:00:00, temp=16.76, feel_like=15.93)
+2023-05-16 10:16:45,372 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-18 15:00:00, temp=14.92, feel_like=14.03)
+2023-05-16 10:16:45,372 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-18 18:00:00, temp=11.65, feel_like=10.65)
+2023-05-16 10:16:45,372 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-18 21:00:00, temp=7.72, feel_like=5.07)
+2023-05-16 10:16:45,372 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-19 00:00:00, temp=6.4, feel_like=3.57)
+2023-05-16 10:16:45,372 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-19 03:00:00, temp=9.4, feel_like=6.61)
+2023-05-16 10:16:45,372 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-19 06:00:00, temp=9.46, feel_like=6.62)
+2023-05-16 10:16:45,372 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-19 09:00:00, temp=9.1, feel_like=6.33)
+2023-05-16 10:16:45,372 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-19 12:00:00, temp=9.61, feel_like=6.96)
+2023-05-16 10:16:45,372 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-19 15:00:00, temp=9.28, feel_like=6.56)
+2023-05-16 10:16:45,372 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-19 18:00:00, temp=9.48, feel_like=6.35)
+2023-05-16 10:16:45,372 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-19 21:00:00, temp=9.44, feel_like=6.57)
+2023-05-16 10:16:45,372 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-20 00:00:00, temp=9.19, feel_like=6.52)
+2023-05-16 10:16:45,372 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-20 03:00:00, temp=10.08, feel_like=9.44)
+2023-05-16 10:16:45,372 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-20 06:00:00, temp=11.34, feel_like=10.78)
+2023-05-16 10:16:45,372 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-20 09:00:00, temp=15.89, feel_like=15.36)
+2023-05-16 10:16:45,372 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-20 12:00:00, temp=16.55, feel_like=16.01)
+2023-05-16 10:16:45,372 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-20 15:00:00, temp=16.46, feel_like=15.99)
+2023-05-16 10:16:45,372 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-20 18:00:00, temp=12.94, feel_like=12.48)
+2023-05-16 10:16:45,372 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-20 21:00:00, temp=11.69, feel_like=11.16)
+2023-05-16 10:16:45,372 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-21 00:00:00, temp=11.39, feel_like=10.8)
+2023-05-16 10:16:45,372 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-21 03:00:00, temp=14.53, feel_like=13.97)
+2023-05-16 10:16:45,372 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2023-05-21 06:00:00, temp=19.09, feel_like=18.6)
+2023-05-16 10:16:45,372        ModuleWeather -    __download_finish() result = <modules.mod_weather.mod_weather_interfaces.ModuleWeatherData object at 0x122eef340>
+2023-05-16 10:16:45,372        ModuleWeather -    __download_finish() download_done
+2023-05-16 10:16:45,521         DisplayDummy -      display_partial() Display partial; (x,y)=(x=100, y=100, w=800, h=400)
+2023-05-16 10:16:50,635                 root -                setup() Booting system...
+2023-05-16 10:16:50,635                 root -                setup() Booting Display Driver...
+2023-05-16 10:16:50,705                 root -                setup() Booting Renderer...
+2023-05-16 10:16:50,706                 root -                setup() Booting View Coordinator...
+2023-05-16 10:16:50,706           TextWidget -             set_font() font = <PIL.ImageFont.FreeTypeFont object at 0x119c8ee20>
+2023-05-16 10:16:50,706           TextWidget -       set_text_color() color = 0
+2023-05-16 10:16:50,736                 root -                setup() Booting Module Manager
+2023-05-16 10:16:50,737        ModuleWeather - __initialize_connector() Connector name = OpenWeatherConnector
+2023-05-16 10:16:50,737        ModuleWeather - __initialize_connector() Connector instance = <modules.mod_weather.mod_weather_connector_openweather.OpenWeatherConnector object at 0x11cf7aac0>
+2023-05-16 10:16:50,737 OpenWeatherConnector -                setup() Configuration = {'conector': 'OpenWeatherConnector', 'key': '97aef813e5e76ac11aa56982cd0732a9', 'lat': 52.2297, 'lon': 21.0122}
+2023-05-16 10:16:50,737 OpenWeatherConnector -                setup() OpenWeather API Key = 97aef813e5e76ac11aa56982cd0732a9
+2023-05-16 10:16:50,737 OpenWeatherConnector -           __threaded() OpenWeather API thread starting...
+2023-05-16 10:16:50,737                 root -       prepare_screen() Preparing Screen...
+2023-05-16 10:16:50,737         DisplayDummy -                setup() Setting dummy display
+2023-05-16 10:16:50,748         DisplayDummy -                 init() Initializing dummy display
+2023-05-16 10:17:03,245                 root -                setup() Booting system...
+2023-05-16 10:17:03,245                 root -                setup() Booting Display Driver...
+2023-05-16 10:17:03,311                 root -                setup() Booting Renderer...
+2023-05-16 10:17:03,311                 root -                setup() Booting View Coordinator...
+2023-05-16 10:17:03,311           TextWidget -             set_font() font = <PIL.ImageFont.FreeTypeFont object at 0x11e78ee20>
+2023-05-16 10:17:03,311           TextWidget -       set_text_color() color = 0
+2023-05-16 10:17:03,342                 root -                setup() Booting Module Manager
+2023-05-16 10:17:03,343        ModuleWeather - __initialize_connector() Connector name = OpenWeatherConnector
+2023-05-16 10:17:03,343        ModuleWeather - __initialize_connector() Connector instance = <modules.mod_weather.mod_weather_connector_openweather.OpenWeatherConnector object at 0x11ed3aac0>
+2023-05-16 10:17:03,343 OpenWeatherConnector -                setup() Configuration = {'conector': 'OpenWeatherConnector', 'key': '97aef813e5e76ac11aa56982cd0732a9', 'lat': 52.2297, 'lon': 21.0122}
+2023-05-16 10:17:03,343 OpenWeatherConnector -                setup() OpenWeather API Key = 97aef813e5e76ac11aa56982cd0732a9
+2023-05-16 10:17:03,343 OpenWeatherConnector -           __threaded() OpenWeather API thread starting...
+2023-05-16 10:17:03,343                 root -       prepare_screen() Preparing Screen...
+2023-05-16 10:17:03,343         DisplayDummy -                setup() Setting dummy display
+2023-05-16 10:17:03,354         DisplayDummy -                 init() Initializing dummy display
+2025-02-12 15:24:47,330                 root -                setup() Booting system...
+2025-02-12 15:24:47,331                 root -                setup() Booting Display Driver...
+2025-02-12 15:24:47,520                 root -                setup() Booting Renderer...
+2025-02-12 15:24:47,520                 root -                setup() Booting View Coordinator...
+2025-02-12 15:24:47,521           TextWidget -             set_font() font = <PIL.ImageFont.FreeTypeFont object at 0x123907be0>
+2025-02-12 15:24:47,521           TextWidget -       set_text_color() color = 0
+2025-02-12 15:24:47,600                 root -                setup() Booting Module Manager
+2025-02-12 15:24:47,602        ModuleWeather - __initialize_connector() Connector name = OpenWeatherConnector
+2025-02-12 15:24:47,602        ModuleWeather - __initialize_connector() Connector instance = <modules.mod_weather.mod_weather_connector_openweather.OpenWeatherConnector object at 0x13140c640>
+2025-02-12 15:24:47,602 OpenWeatherConnector -                setup() Configuration = {'conector': 'OpenWeatherConnector', 'key': '97aef813e5e76ac11aa56982cd0732a9', 'lat': 52.2297, 'lon': 21.0122}
+2025-02-12 15:24:47,602 OpenWeatherConnector -                setup() OpenWeather API Key = 97aef813e5e76ac11aa56982cd0732a9
+2025-02-12 15:24:47,602 OpenWeatherConnector -           __threaded() OpenWeather API thread starting...
+2025-02-12 15:24:47,602                 root -       prepare_screen() Preparing Screen...
+2025-02-12 15:24:47,602         DisplayDummy -                setup() Setting dummy display
+2025-02-12 15:24:47,629         DisplayDummy -                 init() Initializing dummy display
+2025-02-12 15:24:52,605 OpenWeatherConnector -           __threaded() OpenWeather API thread waiting...
+2025-02-12 15:24:52,606 OpenWeatherConnector -           __threaded() OpenWeather API loading url https://api.openweathermap.org/data/2.5/forecast?id=524901&appid=97aef813e5e76ac11aa56982cd0732a9&&units=metric&lat=52.2297&lon=52.2297
+2025-02-12 15:24:52,886         DisplayDummy -      display_partial() Display partial; (x,y)=(x=100, y=100, w=800, h=400)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() OpenWeather API data convertion...
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-12 15:00:00, temp=-15.44, feel_like=-19.01)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-12 18:00:00, temp=-15.9, feel_like=-20.66)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-12 21:00:00, temp=-16.51, feel_like=-21.51)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-13 00:00:00, temp=-16.63, feel_like=-22.17)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-13 03:00:00, temp=-17.09, feel_like=-22.28)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-13 06:00:00, temp=-12.72, feel_like=-16.86)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-13 09:00:00, temp=-7.92, feel_like=-12.2)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-13 12:00:00, temp=-9.05, feel_like=-12.91)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-13 15:00:00, temp=-14.84, feel_like=-20.05)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-13 18:00:00, temp=-16.04, feel_like=-21.77)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-13 21:00:00, temp=-17, feel_like=-22.71)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-14 00:00:00, temp=-17.08, feel_like=-22.97)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-14 03:00:00, temp=-17.66, feel_like=-23.39)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-14 06:00:00, temp=-12.25, feel_like=-17.68)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-14 09:00:00, temp=-8.22, feel_like=-14.1)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-14 12:00:00, temp=-8.18, feel_like=-13.12)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-14 15:00:00, temp=-14.46, feel_like=-19.8)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-14 18:00:00, temp=-16.35, feel_like=-22.09)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-14 21:00:00, temp=-17.27, feel_like=-22.96)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-15 00:00:00, temp=-17.39, feel_like=-23.28)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-15 03:00:00, temp=-17.97, feel_like=-24.1)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-15 06:00:00, temp=-12.83, feel_like=-18.72)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-15 09:00:00, temp=-8.21, feel_like=-14.32)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-15 12:00:00, temp=-6.54, feel_like=-13.36)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-15 15:00:00, temp=-6.72, feel_like=-13.72)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-15 18:00:00, temp=-5.42, feel_like=-12.42)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-15 21:00:00, temp=-3.94, feel_like=-10.94)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-16 00:00:00, temp=-3.38, feel_like=-10.38)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-16 03:00:00, temp=-2.44, feel_like=-9.44)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-16 06:00:00, temp=-2.15, feel_like=-9.15)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-16 09:00:00, temp=-1.65, feel_like=-7.63)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-16 12:00:00, temp=-5.18, feel_like=-11.54)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-16 15:00:00, temp=-8.45, feel_like=-15.35)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-16 18:00:00, temp=-10.18, feel_like=-17.16)
+2025-02-12 15:24:52,894 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-16 21:00:00, temp=-11.19, feel_like=-18.19)
+2025-02-12 15:24:52,895 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-17 00:00:00, temp=-14.2, feel_like=-21.11)
+2025-02-12 15:24:52,895 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-17 03:00:00, temp=-15.17, feel_like=-21.31)
+2025-02-12 15:24:52,895 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-17 06:00:00, temp=-14.28, feel_like=-19.92)
+2025-02-12 15:24:52,895 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-17 09:00:00, temp=-11.83, feel_like=-18.14)
+2025-02-12 15:24:52,895 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-17 12:00:00, temp=-12.64, feel_like=-16.88)
+2025-02-12 15:24:52,895        ModuleWeather -    __download_finish() result = <modules.mod_weather.mod_weather_interfaces.ModuleWeatherData object at 0x1316367f0>
+2025-02-12 15:24:52,895        ModuleWeather -    __download_finish() download_done
+2025-02-12 15:24:57,926         DisplayDummy -      display_partial() Display partial; (x,y)=(x=100, y=100, w=800, h=400)
+2025-02-12 15:25:02,969         DisplayDummy -      display_partial() Display partial; (x,y)=(x=100, y=100, w=800, h=400)
+2025-02-12 15:25:08,013         DisplayDummy -      display_partial() Display partial; (x,y)=(x=100, y=100, w=800, h=400)
+2025-02-12 15:25:13,059         DisplayDummy -      display_partial() Display partial; (x,y)=(x=100, y=100, w=800, h=400)
+2025-02-12 15:27:33,406                 root -                setup() Booting system...
+2025-02-12 15:27:33,406                 root -                setup() Booting Display Driver...
+2025-02-12 15:27:33,503                 root -                setup() Booting Renderer...
+2025-02-12 15:27:33,504                 root -                setup() Booting View Coordinator...
+2025-02-12 15:27:33,505           TextWidget -             set_font() font = <PIL.ImageFont.FreeTypeFont object at 0x11ed4ea30>
+2025-02-12 15:27:33,505           TextWidget -       set_text_color() color = 0
+2025-02-12 15:27:33,548                 root -                setup() Booting Module Manager
+2025-02-12 15:27:33,549        ModuleWeather - __initialize_connector() Connector name = OpenWeatherConnector
+2025-02-12 15:27:33,549        ModuleWeather - __initialize_connector() Connector instance = <modules.mod_weather.mod_weather_connector_openweather.OpenWeatherConnector object at 0x11ed8fb80>
+2025-02-12 15:27:33,550 OpenWeatherConnector -                setup() Configuration = {'conector': 'OpenWeatherConnector', 'key': '97aef813e5e76ac11aa56982cd0732a9', 'lat': 52.2297, 'lon': 21.0122}
+2025-02-12 15:27:33,550 OpenWeatherConnector -                setup() OpenWeather API Key = 97aef813e5e76ac11aa56982cd0732a9
+2025-02-12 15:27:33,550 OpenWeatherConnector -           __threaded() OpenWeather API thread starting...
+2025-02-12 15:27:33,550                 root -       prepare_screen() Preparing Screen...
+2025-02-12 15:27:33,550         DisplayDummy -                setup() Setting dummy display
+2025-02-12 15:27:33,562         DisplayDummy -                 init() Initializing dummy display
+2025-02-12 15:27:38,555 OpenWeatherConnector -           __threaded() OpenWeather API thread waiting...
+2025-02-12 15:27:38,556 OpenWeatherConnector -           __threaded() OpenWeather API loading url https://api.openweathermap.org/data/2.5/forecast?id=524901&appid=97aef813e5e76ac11aa56982cd0732a9&&units=metric&lat=52.2297&lon=52.2297
+2025-02-12 15:27:38,752 OpenWeatherConnector -            __convert() OpenWeather API data convertion...
+2025-02-12 15:27:38,752 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-12 15:00:00, temp=-15.44, feel_like=-19.01)
+2025-02-12 15:27:38,752 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-12 18:00:00, temp=-15.9, feel_like=-20.66)
+2025-02-12 15:27:38,752 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-12 21:00:00, temp=-16.51, feel_like=-21.51)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-13 00:00:00, temp=-16.63, feel_like=-22.17)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-13 03:00:00, temp=-17.09, feel_like=-22.28)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-13 06:00:00, temp=-12.72, feel_like=-16.86)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-13 09:00:00, temp=-7.92, feel_like=-12.2)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-13 12:00:00, temp=-9.05, feel_like=-12.91)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-13 15:00:00, temp=-14.84, feel_like=-20.05)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-13 18:00:00, temp=-16.04, feel_like=-21.77)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-13 21:00:00, temp=-17, feel_like=-22.71)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-14 00:00:00, temp=-17.08, feel_like=-22.97)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-14 03:00:00, temp=-17.66, feel_like=-23.39)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-14 06:00:00, temp=-12.25, feel_like=-17.68)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-14 09:00:00, temp=-8.22, feel_like=-14.1)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-14 12:00:00, temp=-8.18, feel_like=-13.12)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-14 15:00:00, temp=-14.46, feel_like=-19.8)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-14 18:00:00, temp=-16.35, feel_like=-22.09)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-14 21:00:00, temp=-17.27, feel_like=-22.96)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-15 00:00:00, temp=-17.39, feel_like=-23.28)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-15 03:00:00, temp=-17.97, feel_like=-24.1)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-15 06:00:00, temp=-12.83, feel_like=-18.72)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-15 09:00:00, temp=-8.21, feel_like=-14.32)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-15 12:00:00, temp=-6.54, feel_like=-13.36)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-15 15:00:00, temp=-6.72, feel_like=-13.72)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-15 18:00:00, temp=-5.42, feel_like=-12.42)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-15 21:00:00, temp=-3.94, feel_like=-10.94)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-16 00:00:00, temp=-3.38, feel_like=-10.38)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-16 03:00:00, temp=-2.44, feel_like=-9.44)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-16 06:00:00, temp=-2.15, feel_like=-9.15)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-16 09:00:00, temp=-1.65, feel_like=-7.63)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-16 12:00:00, temp=-5.18, feel_like=-11.54)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-16 15:00:00, temp=-8.45, feel_like=-15.35)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-16 18:00:00, temp=-10.18, feel_like=-17.16)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-16 21:00:00, temp=-11.19, feel_like=-18.19)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-17 00:00:00, temp=-14.2, feel_like=-21.11)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-17 03:00:00, temp=-15.17, feel_like=-21.31)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-17 06:00:00, temp=-14.28, feel_like=-19.92)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-17 09:00:00, temp=-11.83, feel_like=-18.14)
+2025-02-12 15:27:38,753 OpenWeatherConnector -            __convert() dt = ModuleWeatherItem(dt=2025-02-17 12:00:00, temp=-12.64, feel_like=-16.88)
+2025-02-12 15:27:38,753        ModuleWeather -    __download_finish() result = <modules.mod_weather.mod_weather_interfaces.ModuleWeatherData object at 0x125f66b20>
+2025-02-12 15:27:38,753        ModuleWeather -    __download_finish() download_done

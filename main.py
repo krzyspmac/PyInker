@@ -5,7 +5,7 @@ from threading import Thread
 from PIL import Image, ImageDraw, ImageFont
 from modules.general import *
 from modules.widgets import *
-# from display.display_waveshare import *
+from display.display_waveshare import *
 from display.display_dummy import *
 from configuration import Configuration
 from modules.renderer import Renderer
@@ -130,7 +130,7 @@ def main(win):
 
         while renderer.dequeue_refresh() is not None:
             print("Rendering...\r")
-            pass
+        #renderer.sleep()
 
         try:                 
            key = win.getkey()         

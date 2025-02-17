@@ -31,6 +31,7 @@ class OpenWeatherConnector(ModuleWeatherConnectorInterface):
         self.__logger.info("OpenWeather API Key = %s", self.__key)
 
     def download(self, lambda_result):
+        self.__logger.info("OpenWeather API downlaod starting...")
         super().download(lambda_result)
         self.__lambda_result = lambda_result
         thread = Thread(target=self.__threaded)
@@ -41,13 +42,13 @@ class OpenWeatherConnector(ModuleWeatherConnectorInterface):
 
     def __threaded(self):
         self.__logger.info("OpenWeather API thread starting...")
-        time.sleep(5)
         self.__logger.info("OpenWeather API thread waiting...")
         url_string = "https://api.openweathermap.org/data/2.5/forecast?id=524901&appid=" + self.__key + "&&units=metric" + "&lat=" + str(self.__lat) + "&lon=" + str(self.__lat)
         self.__logger.info("OpenWeather API loading url %s", url_string)
         with urllib.request.urlopen(url_string) as url:
             data = json.load(url)
             self.__lambda_result(self.__convert(data))
+        time.sleep(60)
         pass
 
     def __convert(self, data) -> ModuleWeatherData:

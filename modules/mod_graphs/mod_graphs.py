@@ -46,12 +46,12 @@ class GraphWidget(WidgetInterface):
 
     def setup(
             self, 
-            line_width: float = 2.0,
+            line_width: float = 5.0,
             y_step: float = 10,
             dpi: float = 72.0,
             main_title_font_size: float = 20.0,
-            title_font_size: float = 20.0,
-            tick_font_size: float = 15.0
+            title_font_size: float = 40.0,
+            tick_font_size: float = 20.0
         ):
         """Setup visual appearance."""
         self.line_width = line_width
@@ -64,7 +64,8 @@ class GraphWidget(WidgetInterface):
     
     def set_data(
             self, 
-            x_data, 
+            x_data,
+            x_labels,
             y_data, 
             title_label: str = "Temparature",
             x_axis_label: str = None,
