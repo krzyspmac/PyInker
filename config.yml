@@ -22,6 +22,6 @@ fonts: # The main fonts used across the application. Accessed by `name`.
 modules:
   mod_weather:
     conector: "OpenWeatherConnector"
-    key: "97aef813e5e76ac11aa56982cd0732a9"
+    key: "API"
     lat: 52.2297
     lon: 21.0122
